@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="rc\main.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtUic Include="wgt\wgtmain.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="wgt\wgtmain.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="wgt\wgtmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sqlite\dbpage\dbpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="camera\netcamera_p.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\wgtbegan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\wgtlogo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\wgtset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\wgtprogress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\wgtreg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\wgtverify.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\reg\wgtregno1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\reg\wgtregno2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\reg\wgtregno3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\reg\wgtregno4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\reg\wgtregno5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\reg\wgtregno6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\verify\wgtverifyno1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\verify\wgtverifyno2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\verify\wgtverifyno3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\verify\wgtverifyno4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\verify\wgtverifyno5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\verify\wgtverifyno6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="artifact\regthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgtapi\imagewidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\reg\wgtregno21.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\wgthome.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="camera\netcamera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="config\appconfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgtapi\dlgimageview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sqlite\sqlitedriver\sqlitedriver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opencv\nativemark.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\reg\wgtregno51.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgtapi\refreshviewlabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sysconfig\systemset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sysconfig\wifimanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\progress\wgtprogress1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\progress\wgtprogress2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="upload\minios3client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="networkserver\networkserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgtapi\ringwait.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgtapi\batchview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgtapi\dlginfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="artifact\regdb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="artifact\verifydb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="artifact\verifythread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\verify\wgtverifyno31.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\verify\wgtverifyno41.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\reg\wgtregno41.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="networkserver\netimageload.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\verify\wgtverifyno21.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="camera\usbcamera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgtapi\dlginput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\verify\wgtverifyno61.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="autoreplyprint\labelprint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sysconfig\bluetoothpairer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wgt\wgtsetnetcamera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="sqlite\dbpage\dbpage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="camera\netcamera_p.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\wgtbegan.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\wgtlogo.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\wgthome.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\wgtset.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\wgtprogress.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\wgtreg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\wgtverify.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\reg\wgtregno1.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\reg\wgtregno3.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\reg\wgtregno4.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\reg\wgtregno5.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\reg\wgtregno6.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\verify\wgtverifyno1.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\verify\wgtverifyno2.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\verify\wgtverifyno3.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\verify\wgtverifyno4.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\verify\wgtverifyno5.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\verify\wgtverifyno6.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="zxing\zxingqtreader.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="camera\usbcamera.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="artifact\regthread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\reg\wgtregno2.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgtapi\imagewidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\reg\wgtregno21.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="camera\netcamera.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="config\appconfig.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgtapi\dlgimageview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="opencv\nativemark.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\reg\wgtregno51.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgtapi\refreshviewlabel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\progress\wgtprogress1.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\progress\wgtprogress2.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="upload\minios3client.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="networkserver\networkserver.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgtapi\ringwait.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgtapi\batchview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgtapi\dlginfo.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="artifact\regdb.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="artifact\verifydb.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="artifact\verifythread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\verify\wgtverifyno31.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\verify\wgtverifyno41.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\reg\wgtregno41.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="networkserver\netimageload.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\verify\wgtverifyno21.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgtapi\dlginput.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="sysconfig\networkspeedtester.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\verify\wgtverifyno61.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="autoreplyprint\labelprint.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="sysconfig\bluetoothpairer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="wgt\wgtsetnetcamera.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="zxing\zxingqtwriter.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="reg\native_mark.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlite\sqlitedriver\sqlitedriver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sysconfig\systemset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sysconfig\wifimanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="artifact\artifact.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="wgt\wgtbegan.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\wgtlogo.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\wgthome.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\wgtset.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\wgtprogress.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\wgtreg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\wgtverify.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\reg\wgtregno1.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\reg\wgtregno2.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\reg\wgtregno3.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\reg\wgtregno4.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\reg\wgtregno5.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\reg\wgtregno6.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\verify\wgtverifyno2.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\verify\wgtverifyno3.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\verify\wgtverifyno5.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\verify\wgtverifyno6.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\reg\wgtregno21.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgtapi\dlgimageview.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\reg\wgtregno51.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\progress\wgtprogress1.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\progress\wgtprogress2.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgtapi\batchview.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgtapi\dlginfo.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\verify\wgtverifyno1.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\verify\wgtverifyno31.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\verify\wgtverifyno4.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\verify\wgtverifyno41.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\reg\wgtregno41.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\verify\wgtverifyno21.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgtapi\dlginput.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\verify\wgtverifyno61.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="wgt\wgtsetnetcamera.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="rc\imgacqu.qss">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="rc\config\netcamera.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="rc\config\appconf.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="C:\Users\epaipc\Documents\Visual Studio 18\Visualizers\qt6.natvis" />
+  </ItemGroup>
+</Project>

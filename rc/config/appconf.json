@@ -1,0 +1,41 @@
+﻿{
+  "app": {
+    "regDBDir": "",
+    "regImageDir": "",
+    "verifyDBDir": "",
+    "verifyRawImageDir": "",
+    "verifyImageDir": ""
+  },
+  "netWorkServer": {
+    "url": "http://s63tk.epailive.com",
+    "username": "tts",
+    "password": "123456",
+    "updateUrl": "https://test20minioapi.epailive.com/s63/imgacqu_update_info.json"
+  },
+  "netCamera": {
+    "ip": "192.168.1.230",
+    "port": 80,
+    "username": "admin",
+    "password": "123456",
+    "flipLR": false,
+    "flipUD": false,
+    "lowZoom": 22,
+    "highZoom": 146
+  },
+  "usbCamera": {
+    "flipLR": false,
+    "flipUD": false
+  },
+  "minio": {
+    "addr": "test20minioapi.epailive.com",
+    "imageUrl": "https://test20minioimg.epailive.com/minio/s63/",
+    "accessKey": "0B8mFaFpeZIseooAojv8",
+    "secretKey": "9a0RKfFYwZAsrLAQW6TZnzN4KIrdvaoL8AfqDFGM",
+    "bucketKey": "s63",
+    "reUploadNum": 3
+  },
+  "labelPrint": {
+    "com": "COM5"
+  }
+
+}

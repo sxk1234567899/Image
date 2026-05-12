@@ -1,0 +1,817 @@
+/*全局通用样式*/
+* {
+  padding: 0px;        /* 移除内边距 */
+  margin: 0px;         /* 移除外边距 */
+  border: 0px;         /* 移除边框宽度 */
+  border-style: none;  /* 移除边框样式 */
+  border-image: none;  /* 移除边框图片 */
+  outline: 0;          /* 移除焦点轮廓 */
+  background-color: #FFFFFF; /* 设置白色背景 */
+  color: #000000;
+  font: 25px "Microsoft YaHei UI";
+}
+
+QLabel
+{
+  background-color:#FFFFFF;
+  color: #000000;
+  border-style:outset;
+  border: 0px;
+  font: 40px "Microsoft YaHei UI";
+}
+
+QPushButton
+{
+  background-color: #1563FF;
+  color: #FFFFFF;
+  border: 3px solid #FFFFFF;
+  border-radius: 35px;
+  font: 700 30px "Microsoft YaHei UI";
+}
+QPushButton:disabled
+{
+    background-color: #cccccc; /* 灰色背景 */
+    color: #888888;            /* 浅灰色文本 */
+    border: 1px solid #aaaaaa; /* 边框 */
+}
+QLineEdit
+{
+  border-radius: 4px;
+  border: 3px solid #666666;
+  font: 26px "Microsoft YaHei UI";
+}
+
+QProgressBar
+{
+  border-style:outset;
+  border-radius: 0px;
+  font: 700 20px "Microsoft YaHei UI";
+}
+QProgressBar::chunk {
+  background-color:#1563FF;
+  border-style:outset;
+  border-radius: 0px;
+}
+QTimeEdit,QDateEdit,QDateTimeEdit
+{
+  background-color: transparent;
+  border-width:0;
+  border-style:outset;
+  font: 12pt "Microsoft YaHei UI";
+}
+
+QScrollArea
+{
+  background-color:#FFFFFF;
+  color: #000000;
+}
+QVideoWidget,#videoWidget
+{
+  background:#000000
+}
+
+QSpinBox
+{
+  background:#E6E6E6;
+  color: #000000;
+  font: 28px "Microsoft YaHei UI";
+  border: 0;
+}
+QTabWidget 
+{
+  background:#FFFFFF;
+  border: none;
+  border-radius: 0;
+  gridline-color: transparent;  /* 确保网格线不可见 */
+}
+QTableView::item 
+{
+  background:#FFFFFF;
+  border: none;
+  border-bottom: 4px solid #E6E6E6;
+  padding: 4px;
+}
+QTableView::item:selected 
+{
+  background:#FFFFFF;
+  border: none;
+  border-bottom: 4px solid #E6E6E6;
+  padding: 4px;
+  color: #1563FF;
+  font: 700 25px "Microsoft YaHei UI";
+}
+QHeaderView 
+{
+  background:#FFFFFF;
+  color: #000000;
+  border: 0px;
+  border-radius: 0;
+
+}
+QHeaderView::section 
+{
+  background:#FFFFFF;
+  color: #000000;
+  border: none;           /* 隐藏表头分割线 */
+  border-bottom: 4px solid #E6E6E6;  /* 保留底部边框作为行分割线 */
+  padding: 4px;
+}
+QDialog
+{
+  background-color:#FFFFFF;
+  color: #000000;
+  border-style:outset;
+  border: 2px solid #E6E6E6; 
+  font: 20px "Microsoft YaHei UI";
+}
+QDialogButtonBox QPushButton 
+{
+	max-width:100px;
+	max-height:70px;
+	min-width: 100px;
+	min-height: 70px;
+}
+
+QSlider::groove:horizontal{
+background:#243D5B;
+height:60px;
+border-radius:4px;
+}
+
+QSlider::add-page:horizontal{
+background:#FFFFFF;
+}
+
+QSlider::sub-page:horizontal{
+background:#1563FF;
+}
+
+QSlider::handle:horizontal{
+width:40px;
+margin-top:-3px;
+margin-bottom:-3px;
+border-radius:6px;
+background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,stop:0.6 #1B3149,stop:0.8 #0F1F2F);
+}
+
+QTextBrowser
+{
+  color: #555555;
+  font: 22px "Microsoft YaHei UI";
+
+}
+
+/*针对WgtHomeClass的状态*/
+#WgtHomeClass #widgetSave,#WgtHomeClass #widgetNet,#WgtHomeClass #widgetDevice,#WgtHomeClass #widgetSys
+{
+  background-color:#F1F1F1;
+  color: rgb(0, 0, 0);
+  border-style:outset;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  font: 40px "Microsoft YaHei UI";
+}
+#WgtHomeClass QLabel
+{
+  background-color:#F1F1F1;
+  color: #000000;
+  border-style:outset;
+  border: 0px;
+  font: 40px "Microsoft YaHei UI";
+}
+#WgtHomeClass #labelWifi,#WgtHomeClass #label4g,#WgtHomeClass #labelPrinter,#WgtHomeClass #labelUSBCamera,#WgtHomeClass #labelNetCamera
+{
+  font: 20px "Microsoft YaHei UI";
+}
+#widgetSys  QLabel
+{
+  font: 30px "Microsoft YaHei UI";
+}
+#WgtHomeClass QPushButton
+{
+background-color: #FFFFFF;
+color: #1563FF;
+border-radius: 16px;
+border: 3px solid #111111;
+font: 700 78px "Microsoft YaHei UI";
+}
+
+/*针WgtLogoClass对*/
+#WgtLogoClass ,#WgtLogoClass QLabel
+{
+  background-color:#FFFFFF;
+  font: 24px "Microsoft YaHei UI";
+  color: rgb(0, 0, 0);
+}
+#WgtLogoClass #labelTitle
+{
+  background-color:#FFFFFF;
+  font:  30px "Microsoft YaHei UI";
+  color: rgb(0, 0, 0);
+}
+#WgtLogoClass ,#WgtLogoClass QLineEdit
+{
+  border-radius: 40px;
+  font: 30px "Microsoft YaHei UI";
+}
+
+#WgtLogoClass QPushButton
+{
+    border-radius: 40px;
+    font: 30px "Microsoft YaHei UI";
+}
+#WgtLogoClass #pushButtonSet
+{
+    border-radius: 0px;
+    background-color: transparent;
+}
+
+/*WgtMainClass*/
+#widgetTop
+{
+    background-color: qlineargradient( spread: pad, x1:0, y1:0, x2:1, y2:0, stop:0 #0049DA, stop:1 #5D93FF);
+}
+#widgetTop #labelName
+{
+  font: 700 22px "Microsoft YaHei UI";
+  color:#FFFFFF;
+  background-color: transparent;
+}
+#widgetTop #labelBatt
+{
+  font: 14px "Microsoft YaHei UI";
+  color:#000000;
+  background-color: transparent;
+  background-image: url(":/image/batt.png");
+}
+#labelLogInfo
+{
+  color:#FFFFFF;
+  background-color: transparent;
+  font: 18px "Microsoft YaHei UI";
+}
+#widgetTop #widgetTopHome,#widgetTop #widgetTopQuit
+{
+  background-color: transparent;
+}
+#widgetTop #pushButtonHome,#widgetTop #pushButtonBack,#widgetTop #pushButtonLogOut
+{
+  color:#FFFFFF;
+  font: 20px "Microsoft YaHei UI";
+  background-color: transparent;
+  border-width:0;
+  border-style:outset;
+}
+#widgetTop #timeEdit,#widgetTop #dateEdit
+{
+  color:#FFFFFF;
+  background-color: transparent;
+  border-width:0;
+  border-style:outset;
+  font: 12pt "Microsoft YaHei UI";
+}
+
+
+
+/*设置WgtRegClass及相关页样式*/
+#stackedWidget,#WgtRegClass,#WgtRegNo1Class,QWidget #WgtRegNo2Class,#WgtRegNo3Class,#WgtRegNo4Class,#WgtRegNo5Class,#widgetTool
+{
+  background-color:#E6E6E6;
+}
+#WgtRegNo1Class QLabel
+{
+  font: 28px "Microsoft YaHei UI";
+}
+#WgtRegNo1Class #labelCode2d
+{
+  image:url(:/image/code2d.png);
+}
+#WgtRegNo1Class #labelImage,#WgtRegNo5Class #labelImage,#WgtRegNo6Class #labelImage
+{
+  color: #888888;
+  background-color:#F1F1F1;
+
+}
+#WgtRegNo1Class #pushButtonMode
+{
+  background-color: #FFFFFF;
+  color: #1563FF;
+  border: 3px solid #1563FF;
+  border-radius: 35px;
+  font: 700 30px "Microsoft YaHei UI";
+}
+#WgtRegNo1Class #labelBatchPage,#WgtRegNo1Class #labelListPage,#WgtVerifyNo1Class #labelBatchPage,#WgtVerifyNo1Class #labelListPage
+{
+  font: 22px "Microsoft YaHei UI";
+}
+#WgtRegNo1Class QTabWidget,#WgtVerifyNo1Class QTabWidget
+{
+  background:#FFFFFF;
+  border: none;
+  border-radius: 0;
+  gridline-color: transparent;  /* 确保网格线不可见 */
+}
+#WgtRegNo1Class #tableWidgetBatch::item,#WgtVerifyNo1Class #tableWidgetBatch::item
+{
+  background:transparent ;
+   border: none;
+  border-bottom: 20px solid #FFFFFF;
+}
+#WgtRegNo1Class #tableWidgetList::item,#WgtVerifyNo1Class #tableWidgetList::item 
+{
+  background:#F1F1F1 ;
+  border: none;
+  border-bottom: 20px solid #FFFFFF;
+}
+
+#WgtRegNo1Class #stackedWidget QToolButton,#WgtVerifyNo1Class #stackedWidget QToolButton
+{
+  background-color:#000000 ;
+  border: 1px;
+  border-radius: 26px;
+}
+#WgtRegNo2Class #widgetImage
+{
+  background-color:#FFFFFF;
+  color: #000000;
+}
+#WgtRegNo2Class QRadioButton 
+{
+  color: #000000;
+  font: 700 30px "Microsoft YaHei UI";
+  background-color: #FFFFFF;
+  /*border-radius: 4px;*/
+  spacing: 20px;
+  padding-right: 2px; 
+  padding-left: 2px;  
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #DDDDDD;
+}
+#WgtRegNo2Class QRadioButton:checked 
+{
+	background-color: #1563ff;
+	color: #FFFFFF;
+
+}
+#WgtRegNo2Class QRadioButton::indicator 
+{
+	width: 16px;
+	height: 16px;
+	subcontrol-position: top left;
+	right: 2px;
+	top: 2px;
+	
+}
+#WgtRegNo2Class QRadioButton::indicator:unchecked 
+{
+	image: url(:/image/unchecked.png);
+}
+
+#WgtRegNo2Class QRadioButton::indicator:checked 
+{
+	image: url(:/image/checked.png);
+} 
+
+#WgtRegNo2Class #radioButtonTop
+{
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #DDDDDD;
+  /* 左侧圆角效果 */
+  border-top-left-radius: 30px;    /* 左上角圆角半径 */
+  border-bottom-left-radius: 30px; /* 左下角圆角半径 */
+}
+
+#WgtRegNo2Class #radioButtonPar
+{
+  spacing: 0px;
+  padding-right: 20px; 
+  padding-left: 5px;  
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+  /* 右侧圆角效果 */
+  border-top-right-radius: 30px;    /* 左上角圆角半径 */
+  border-bottom-right-radius: 30px; /* 左下角圆角半径 */
+}
+#WgtRegNo21Class,#WgtRegNo3Class #spinBoxGMarked,#WgtRegNo3Class #spinBoxAllMarked
+{
+  background-color: transparent;
+}
+#WgtRegNo3Class #labelImage
+{
+  background-color:#000000;
+}
+#WgtRegNo3Class #labelInfoIcon,#WgtRegNo4Class #labelInfoIcon,#WgtVerifyNo3Class #labelInfoIcon,#WgtVerifyNo4Class #labelInfoIcon
+{
+  image: url(:/image/info.png);
+}
+#WgtRegNo3Class #labelInfo,#WgtRegNo4Class #labelInfo,#WgtVerifyNo3Class #labelInfo,#WgtVerifyNo4Class #labelInfo,#WgtRegNo3Class #spinBoxGMarked,#WgtRegNo3Class #spinBoxAllMarked
+{
+  font:700 20px "Microsoft YaHei UI";
+}
+#WgtRegNo3Class #pushButtonMarked
+{
+  /*background-color: #ff0000;*/
+  background-color: #08B32B;
+}
+#WgtRegNo3Class #pushButtonReMarked
+{
+  background-color: #FFBC31;
+}
+#WgtRegNo3Class #pushButtonSkipSampling
+{
+  background-color: #E6E6E6;
+  color: #1563FF;
+  border: none;
+}
+#WgtRegNo4Class #stackedWidgetBtn,#WgtRegNo4Class #pagePhoto,#WgtRegNo4Class #pageToPhoto,
+#WgtVerifyNo4Class #stackedWidgetBtn,#WgtVerifyNo4Class #pagePhoto,#WgtVerifyNo4Class #pageToPhoto
+{
+  background-color: transparent;
+}
+#WgtRegNo4Class QRadioButton,#WgtVerifyNo4Class QRadioButton 
+{
+  color: #000000;
+  font: 700 30px "Microsoft YaHei UI";
+  background-color: #FFFFFF;
+  /*border-radius: 4px;*/
+  spacing: 20px;
+  padding-right: 10px; 
+  padding-left: 10px;  
+  border: 2px solid #000000;
+}
+#WgtRegNo4Class QRadioButton::disabled,#WgtVerifyNo4Class QRadioButton::disabled
+{
+    background-color: #cccccc; /* 灰色背景 */
+    color: #888888;            /* 浅灰色文本 */
+    border: 1px solid #aaaaaa; /* 边框 */
+}
+#WgtRegNo4Class #radioButtonLow,#WgtVerifyNo4Class #radioButtonLow
+{
+  border-right: 0px;
+  /* 左侧圆角效果 */
+  border-top-left-radius: 35px;    /* 左上角圆角半径 */
+  border-bottom-left-radius: 35px; /* 左下角圆角半径 */
+  icon: url(:/image/low.png);
+  icon-size: 50;
+}
+#WgtRegNo4Class #radioButtonHgt,#WgtVerifyNo4Class #radioButtonHgt
+{
+  /* 左侧圆角效果 */
+  border-top-right-radius: 35px;    /* 左上角圆角半径 */
+  border-bottom-right-radius: 35px; /* 左下角圆角半径 */
+}
+#WgtRegNo4Class QRadioButton::indicator,#WgtVerifyNo4Class QRadioButton::indicator  
+{
+	width: 16px;
+	height: 16px;
+	
+  border-radius: 8px;
+}
+#WgtRegNo4Class QRadioButton:checked,#WgtVerifyNo4Class QRadioButton:checked 
+{
+	background-color: #000000;
+	color: #FFFFFF;
+
+}
+#WgtRegNo4Class QRadioButton::indicator:unchecked,#WgtVerifyNo4Class QRadioButton::indicator:unchecked 
+{
+	background-color: #FFFFFF;
+	color:  #FFFFFF;
+}
+
+#WgtRegNo4Class QRadioButton::indicator:checked,#WgtVerifyNo4Class QRadioButton::indicator:checked 
+{
+  background-color: #00FF17;
+	color:  #00FF17;
+} 
+
+#WgtRegNo4Class #pushButtonPhoto,#WgtVerifyNo4Class #pushButtonPhoto
+{
+  padding-left: 0px;          /* 为图标留出空间 */
+  spacing: 30px;  
+  text-align: left;            /* 文本左对齐 */
+  background-color: #000000;
+}
+
+#WgtRegNo41Class #toolButtonManualFocus,#WgtRegNo41Class #toolButtonFocusAdd,#WgtRegNo41Class #toolButtonFocusSub
+{
+ border-radius: 10px;
+}
+
+#WgtRegNo5Class QLabel
+{
+  font: 18px "Microsoft YaHei UI";
+}
+
+#WgtRegNo5Class #labelName
+{
+  font: 700 34px "Microsoft YaHei UI";
+}
+
+#WgtRegNo51Class #lableImageName,#WgtRegNo51Class #checkBoxSetMain
+{
+  font:  20px "Microsoft YaHei UI";
+}
+#WgtRegNo51Class #toolButtonZoomIn,#WgtRegNo51Class #checkBoxSetMain,#WgtVerifyNo21Class #toolButtonZoomIn,#WgtVerifyNo61Class #toolButtonZoomIn
+{
+  background-color: transparent;
+}
+#WgtRegNo51Class #checkBoxSetMain::indicator 
+{
+	width: 16px;
+	height: 16px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+
+}
+#WgtRegNo51Class #checkBoxSetMain::indicator:checked 
+{
+  background-color: #00FF17;
+	color:  #FFFFFF;
+}
+#WgtRegNo51Class #checkBoxSetMain::indicator:unchecked 
+{
+	background-color: #FFFFFF;
+	color:  #FFFFFF;
+}
+
+#WgtRegNo6Class QLabel
+{
+  font: 24px "Microsoft YaHei UI";
+}
+#WgtRegNo6Class #widgetCertificate
+{
+border: 6px solid #ECECEC;
+}
+
+/**/
+#WgtVerifyNo1Class,#WgtVerifyNo2Class,#WgtVerifyNo3Class,#WgtVerifyNo4Class,#WgtVerifyNo5Class,#WgtVerifyNo6Class,
+#widgetTool
+{
+  background-color: #E6E6E6;
+}
+#WgtVerifyNo1Class QPushButton,#WgtVerifyNo2Class QPushButton,#WgtVerifyNo3Class QPushButton,#WgtVerifyNo4Class QPushButton,#WgtVerifyNo5Class QPushButton,#WgtVerifyNo6Class QPushButton
+{
+  background-color: #03A843;
+}
+#WgtVerifyNo1Class QLabel
+{
+  font: 28px "Microsoft YaHei UI";
+}
+#WgtVerifyNo1Class #pushButtonMode
+{
+  background-color: #FFFFFF;
+  color: #03A843;
+  border: 3px solid #03A843;
+  border-radius: 35px;
+  font: 700 30px "Microsoft YaHei UI";
+}
+#WgtRegNo2Class #labelCode2d
+{
+  image:url(:/image/code2dg.png);
+}
+#WgtVerifyNo1Class #labelImage,#WgtVerifyNo2Class #labelImage
+{
+  background-color:#F1F1F1;
+}
+#WgtVerifyNo2Class  QLabel,#WgtVerifyNo6Class  QLabel
+{
+  font: 20px "Microsoft YaHei UI";
+}
+#WgtVerifyNo2Class #labelName,#WgtVerifyNo6Class #labelName
+{
+  font: 700 34px "Microsoft YaHei UI";
+}
+#WgtVerifyNo21Class #labelIcon
+{
+  background-color: #03A843;
+  color: #03A843;
+  border-radius: 15px;
+}
+#WgtVerifyNo21Class #labelLeftLine,#WgtVerifyNo21Class #labelRightLine
+{
+  background-color: #979797;
+  color: #979797;
+}
+#WgtVerifyNo21Class #labelImage
+{
+  background-color: #F3F3F3;
+  border: 1px solid #CCCCCC;
+}
+#WgtVerifyNo4Class #pushButtonSkipSampling
+{
+  background-color: transparent;
+  color: #03A843;
+  border: none;
+}
+#WgtVerifyNo5Class #labelInfo1
+{
+  font: 700 24px "Microsoft YaHei UI";
+  background-color:#1563FF;
+  color: #FFFFFF;
+}
+#WgtVerifyNo5Class #labelInfo2,#WgtVerifyNo6Class #labelInfo2
+{
+  font: 700 22px "Microsoft YaHei UI";
+}
+#WgtVerifyNo6Class #labelVerifyResult
+{
+  font: 700 24px "Microsoft YaHei UI";
+  background-color:#00A741;
+  color: #FFFFFF;
+}
+#WgtProgress1Class #tableWidgetVerify,#WgtProgress1Class #tableWidgetReg
+{
+  font: 20px "Microsoft YaHei UI";
+}
+#WgtProgress1Class #labelBatch,#WgtProgress1Class #comboBoxBatch
+{
+  font: 23px "Microsoft YaHei UI";
+}
+#WgtProgress1Class #frameBatch
+{
+  border-radius: 20px;
+  border: 2px solid #DDDDDD;
+
+}
+#WgtProgress1Class #comboBoxBatch
+{
+    color: #1865FF;
+}
+#WgtProgress1Class #comboBoxBatch::drop-down 
+{
+    border: none; /* 移除下拉按钮的边框 */
+}
+#imageBrowsingWidget #imageBrowsingButton
+{
+  spacing: 0px;
+  padding: 0px;  
+  border: 0px solid #DDDDDD;
+  font: 18px "Microsoft YaHei UI";
+  color: #FFFFFF;
+}
+#imageBrowsingWidget #imageBrowsingButton:checked 
+{
+  background-color: #1865FF;
+  color: #FFFFFF;
+}
+#imageBrowsingWidget #imageViewButton
+{
+  font: 22px "Microsoft YaHei UI";
+  background-color: #DA4545;
+  border-radius: 25px;
+}
+#imageBrowsingWidget #imageViewButton:disabled,#imageBrowsingWidget #imageBrowsingButton:disabled
+{
+    background-color: #888888; 
+    color: #FFFFFF; 
+}
+
+/*BatchViewClass*/
+#BatchViewClass,#BatchViewClass *,#BatchViewClass QLabel
+{
+  font: 16px "Microsoft YaHei UI";
+  background-color: #F1F1F1;
+}
+#BatchViewClass #frame
+{
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+}
+#BatchViewClass #labelBatchName
+{
+  font: 26px "Microsoft YaHei UI";
+}
+#BatchViewClass #pushButton
+{
+  color: #1865FF;
+  background-color: #FFFFFF;
+  border: 2px solid #1865FF;
+  border-radius: 20px;
+  font: 24px "Microsoft YaHei UI";
+}
+#BatchViewClass #labelTemp
+{
+  color: #979797;
+  background-color: #979797;
+  border: 2px solid #979797;
+}
+
+
+/*WgtSetClass*/
+#stackedWidgetSetNet QLabel
+{
+   font: 18px "Microsoft YaHei UI";
+}
+
+#WgtSetClass QPushButton,#WgtProgress1Class QPushButton
+{
+  background-color: #D8D8D8 ;
+	color: #000000;
+  border: 0px;
+  border-radius: 3px;
+  font:  34px "Microsoft YaHei UI";
+}
+#widgetNetSetBtn QPushButton
+{
+  padding-left: 10px;  
+  spacing: 30px;
+  text-align: left;  
+}     
+#widgetSetBtn QPushButton:checked,
+#widgetNetSetBtn QPushButton:checked,
+#WgtProgress1Class QPushButton:checked,
+#stackedWidgetSetNet #pushButtonTestWifi:checked
+#stackedWidgetSetNet #pushButtonUpdate4G:checked
+{
+
+  background-color: #1563FF;
+  color: #FFFFFF;
+}
+
+#stackedWidgetSetNet #checkBoxWifi,#stackedWidgetSetNet #checkBox4g
+{
+   font: 22px "Microsoft YaHei UI";
+}
+
+#stackedWidgetSetNet #checkBoxWifi::indicator ,#stackedWidgetSetNet #checkBox4g::indicator 
+{
+  margin-left: 2px;
+  height: 32px;
+  width: 73px;
+	image: url(:/image/cboxunchecked.png);
+}
+#stackedWidgetSetNet #checkBoxWifi:indicator:unchecked,#stackedWidgetSetNet #checkBox4g::indicator:unchecked 
+{
+  height: 32px;
+  width: 73px;
+  image:url(":/image/cboxunchecked.png");
+}
+#stackedWidgetSetNet #checkBoxWifi:indicator:checked,#stackedWidgetSetNet #checkBox4g::indicator:checked 
+{
+  height: 32px;
+  width: 73px;
+  image:url(":/image/cboxchecked.png");
+}
+#stackedWidgetSetNet #pushButtonTestWifi ,#stackedWidgetSetNet #pushButtonUpdateWifi ,#stackedWidgetSetNet #pushButtonTest4G,#stackedWidgetSetNet #pushButtonUpdate4G
+{
+  font:  18px "Microsoft YaHei UI";
+  border-radius: 16px;
+}
+#widget4gitem,#widget4gitem QLabel
+{
+  font:  18px "Microsoft YaHei UI";
+  background-color: #EEEEEE;
+}
+
+#pageSetDevice QLabel,#pageSetDevice QPushButton
+{
+   font:  24px "Microsoft YaHei UI";
+}
+#pageSetDevice QPushButton
+{ 
+  border-radius: 20px;
+  border: 0px;
+} 
+#pageSetDevice QComboBox
+{
+  border: 2px solid #979797 ;
+  border-radius: 5px;
+  font:  20px "Microsoft YaHei UI";
+}
+#pageOther *
+{
+  background-color: transparent;
+}
+
+#DlgInfoClass *,#DlgInputClass *
+{
+   font: 700 26px "Microsoft YaHei UI";
+}
+#DlgInfoClass #labelContent,#DlgInputClass #labelContent
+{
+   font: 26px "Microsoft YaHei UI";
+}
+#DlgInfoClass #pushButtonNo,#DlgInputClass #pushButtonNo
+{
+  background-color: #FFFFFF;
+  color: #1563FF;
+  border: 3px solid #1563FF;
+  border-radius: 35px;
+}
+#DlgInfoClass #pushButtonYes,#DlgInputClass #pushButtonYes
+{
+  background-color: #1563FF;
+  color: #FFFFFF;
+  border: 3px solid #FFFFFF;
+  border-radius: 35px;
+}
+#toolButtonDlgClose
+{
+   background-color: #FFFFFF;
+  color: #000000;
+}

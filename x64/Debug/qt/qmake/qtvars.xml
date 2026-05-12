@@ -1,0 +1,41 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+<Qt_DEFINES_>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_MULTIMEDIAWIDGETS_LIB;QT_WIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_BLUETOOTH_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_CONCURRENT_LIB;QT_SERIALPORT_LIB;QT_SQL_LIB;QT_CORE_LIB</Qt_DEFINES_>
+<Qt_INCLUDEPATH_>E:\Qt\6.8.3\msvc2022_64\include;E:\Qt\6.8.3\msvc2022_64\include\QtMultimediaWidgets;E:\Qt\6.8.3\msvc2022_64\include\QtWidgets;E:\Qt\6.8.3\msvc2022_64\include\QtMultimedia;E:\Qt\6.8.3\msvc2022_64\include\QtGui;E:\Qt\6.8.3\msvc2022_64\include\QtBluetooth;E:\Qt\6.8.3\msvc2022_64\include\QtWebSockets;E:\Qt\6.8.3\msvc2022_64\include\QtNetwork;E:\Qt\6.8.3\msvc2022_64\include\QtConcurrent;E:\Qt\6.8.3\msvc2022_64\include\QtSerialPort;E:\Qt\6.8.3\msvc2022_64\include\QtSql;E:\Qt\6.8.3\msvc2022_64\include\QtCore;E:\Qt\6.8.3\msvc2022_64\mkspecs\win32-msvc</Qt_INCLUDEPATH_>
+<Qt_STDCPP_>stdcpp17</Qt_STDCPP_>
+<Qt_RUNTIME_>MultiThreadedDebugDLL</Qt_RUNTIME_>
+<Qt_CL_OPTIONS_>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8</Qt_CL_OPTIONS_>
+<Qt_LIBS_>E:\Qt\6.8.3\msvc2022_64\lib\Qt6MultimediaWidgetsd.lib;E:\Qt\6.8.3\msvc2022_64\lib\Qt6Widgetsd.lib;E:\Qt\6.8.3\msvc2022_64\lib\Qt6Multimediad.lib;E:\Qt\6.8.3\msvc2022_64\lib\Qt6Guid.lib;E:\Qt\6.8.3\msvc2022_64\lib\Qt6Bluetoothd.lib;E:\Qt\6.8.3\msvc2022_64\lib\Qt6WebSocketsd.lib;E:\Qt\6.8.3\msvc2022_64\lib\Qt6Networkd.lib;E:\Qt\6.8.3\msvc2022_64\lib\Qt6Concurrentd.lib;E:\Qt\6.8.3\msvc2022_64\lib\Qt6SerialPortd.lib;E:\Qt\6.8.3\msvc2022_64\lib\Qt6Sqld.lib;E:\Qt\6.8.3\msvc2022_64\lib\Qt6Cored.lib;E:\Qt\6.8.3\msvc2022_64\lib\Qt6EntryPointd.lib;shell32.lib</Qt_LIBS_>
+<Qt_LINK_OPTIONS_>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"</Qt_LINK_OPTIONS_>
+<QMake_QT_SYSROOT_></QMake_QT_SYSROOT_>
+<QMake_QT_INSTALL_PREFIX_>E:/Qt/6.8.3/msvc2022_64</QMake_QT_INSTALL_PREFIX_>
+<QMake_QT_INSTALL_ARCHDATA_>E:/Qt/6.8.3/msvc2022_64</QMake_QT_INSTALL_ARCHDATA_>
+<QMake_QT_INSTALL_DATA_>E:/Qt/6.8.3/msvc2022_64</QMake_QT_INSTALL_DATA_>
+<QMake_QT_INSTALL_DOCS_>E:/Qt/Docs/Qt-6.8.3</QMake_QT_INSTALL_DOCS_>
+<QMake_QT_INSTALL_HEADERS_>E:/Qt/6.8.3/msvc2022_64/include</QMake_QT_INSTALL_HEADERS_>
+<QMake_QT_INSTALL_LIBS_>E:/Qt/6.8.3/msvc2022_64/lib</QMake_QT_INSTALL_LIBS_>
+<QMake_QT_INSTALL_LIBEXECS_>E:/Qt/6.8.3/msvc2022_64/bin</QMake_QT_INSTALL_LIBEXECS_>
+<QMake_QT_INSTALL_BINS_>E:/Qt/6.8.3/msvc2022_64/bin</QMake_QT_INSTALL_BINS_>
+<QMake_QT_INSTALL_TESTS_>E:/Qt/6.8.3/msvc2022_64/tests</QMake_QT_INSTALL_TESTS_>
+<QMake_QT_INSTALL_PLUGINS_>E:/Qt/6.8.3/msvc2022_64/plugins</QMake_QT_INSTALL_PLUGINS_>
+<QMake_QT_INSTALL_QML_>E:/Qt/6.8.3/msvc2022_64/qml</QMake_QT_INSTALL_QML_>
+<QMake_QT_INSTALL_TRANSLATIONS_>E:/Qt/6.8.3/msvc2022_64/translations</QMake_QT_INSTALL_TRANSLATIONS_>
+<QMake_QT_INSTALL_CONFIGURATION_></QMake_QT_INSTALL_CONFIGURATION_>
+<QMake_QT_INSTALL_EXAMPLES_>E:/Qt/Examples/Qt-6.8.3</QMake_QT_INSTALL_EXAMPLES_>
+<QMake_QT_INSTALL_DEMOS_>E:/Qt/Examples/Qt-6.8.3</QMake_QT_INSTALL_DEMOS_>
+<QMake_QT_HOST_PREFIX_>E:/Qt/6.8.3/msvc2022_64</QMake_QT_HOST_PREFIX_>
+<QMake_QT_HOST_DATA_>E:/Qt/6.8.3/msvc2022_64</QMake_QT_HOST_DATA_>
+<QMake_QT_HOST_BINS_>E:/Qt/6.8.3/msvc2022_64/bin</QMake_QT_HOST_BINS_>
+<QMake_QT_HOST_LIBEXECS_>E:/Qt/6.8.3/msvc2022_64/bin</QMake_QT_HOST_LIBEXECS_>
+<QMake_QT_HOST_LIBS_>E:/Qt/6.8.3/msvc2022_64/lib</QMake_QT_HOST_LIBS_>
+<QMake_QMAKE_SPEC_>win32-msvc</QMake_QMAKE_SPEC_>
+<QMake_QMAKE_XSPEC_>win32-msvc</QMake_QMAKE_XSPEC_>
+<QMake_QMAKE_VERSION_>3.1</QMake_QMAKE_VERSION_>
+<QMake_QT_VERSION_>6.8.3</QMake_QT_VERSION_>
+<QtBkup_QtHash>jZJNagMxDIWvohNkSlpCN1l4ZNVR479KckMoZe5/i3qGCVO66SwMxnrfk57wF3vKxnY/nw6vh+cp6Scen47H6fQCWIQgNIYb+0CmMMZGVopdeiljE+kopBaNE3l2v64PQknYxVrEQD8i3GjUgtfFizOM/Xh640x6HqqUd0Ib2Cgtj2xccpDS6oARS6ocqauoC5FUi2wqBc4Ym6fq7LLXynm/tHBxhT1LH6AIk4Kax1r3WkWXQ3OB1Fz2TjxI60tNtJdf5ZFHcXIHjFOpc/rda9myrCB0r3/oHvs6bGBfHuX+GXCOP9f2zfDH5dHe09jC9w8=</QtBkup_QtHash>
+    <QtVersion>6.8.3</QtVersion>
+    <QtVersionMajor>6</QtVersionMajor>
+    <QtVersionMinor>8</QtVersionMinor>
+    <QtVersionPatch>3</QtVersionPatch>
+  </PropertyGroup>
+</Project>

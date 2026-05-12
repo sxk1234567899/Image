@@ -1,0 +1,349 @@
+﻿{
+  "support": {
+    "cmd": "support"
+  },
+  "name": {
+    "cmd": "name"
+  },
+  "ntp": {
+    "cmd": "ntp"
+  },
+  "default_stream": {
+    "cmd": "default_stream",
+    "default_stream": {
+      "chnn": 0,
+      "idx": 0
+    }
+  },
+  "default_ipv4": {
+    "cmd": "default_ipv4",
+    "default_ipv4": {
+      "chnn": 0,
+      "idx": 0
+    }
+  },
+  "default_name": {
+    "cmd": "default_name"
+  },
+  "default_ntp": {
+    "cmd": "default_ntp"
+  },
+  "default_image": {
+    "cmd": "default_image",
+    "default_image": {
+      "chnn": 0
+    }
+  },
+  "default_img_roi": {
+    "cmd": "default_img_roi",
+    "default_img_roi": {
+      "chnn": 0
+    }
+  },
+  "default_img_exposure": {
+    "cmd": "default_img_exposure",
+    "default_img_exposure": {
+      "chnn": 0
+    }
+  },
+  "default_img_meexposure": {
+    "cmd": "default_img_meexposure",
+    "default_img_meexposure": {
+      "chnn": 0
+    }
+  },
+  "default_img_awb": {
+    "cmd": "default_img_awb",
+    "default_img_awb": {
+      "chnn": 0
+    }
+  },
+  "default_img_hdr_gamma": {
+    "cmd": "default_img_hdr_gamma",
+    "default_img_hdr_gamma": {
+      "chnn": 0
+    }
+  },
+  "default_img_drc": {
+    "cmd": "default_img_drc",
+    "default_img_drc": {
+      "chnn": 0
+    }
+  },
+  "stream": {
+    "cmd": "stream",
+    "stream": {
+      "chnn": 0,
+      "idx": 0
+    }
+  },
+  "get_image": {
+    "cmd": "get_image",
+    "get_image": {
+      "chnn": 0,
+      "idx": 0
+    }
+  },
+  "img_roi": {
+    "cmd": "img_roi",
+    "img_roi": {
+      "chnn": 0,
+      "idx": 0
+    }
+  },
+  "img_meexposure": {
+    "cmd": "img_meexposure",
+    "img_meexposure": {
+      "chnn": 0
+    }
+  },
+  "img_awb": {
+    "cmd": "img_awb",
+    "img_awb": {
+      "chnn": 0
+    }
+  },
+  "info_img_awb": {
+    "cmd": "info_img_awb",
+    "info_img_awb": {
+      "chnn": 0
+    }
+  },
+  "img_mirror_flip": {
+    "cmd": "img_mirror_flip",
+    "img_mirror_flip": {
+      "chnn": 0
+    }
+  },
+  "img_hdr_gamma": {
+    "cmd": "img_hdr_gamma",
+    "img_hdr_gamma": {
+      "chnn": 0,
+      "idx": 0
+    }
+  },
+  "motor_demist": {
+    "cmd": "motor_demist",
+    "motor_demist": {
+      "chnn": 0
+    }
+  },
+  "img_flick_hz": {
+    "cmd": "img_flick_hz",
+    "img_flick_hz": {
+      "chnn": 0
+    }
+  },
+  "system": {
+    "cmd": "system"
+  },
+  "ipv4": {
+    "cmd": "ipv4"
+  },
+  "set_image": {
+    "cmd": "set_image",
+    "set_image": {
+      "bright": 56,
+      "chnn": 0,
+      "contrast": 50,
+      "ezoom_value": 18,
+      "focus_mode": 0,
+      "focus_value": 0,
+      "hue": 50,
+      "saturation": 128,
+      "sharpness": 8
+    }
+  },
+  "set_img_roi": {
+    "cmd": "set_img_roi",
+    "set_img_roi": {
+      "chnn": 0,
+      "roi": true,
+      "roi_mode": 0,
+      "roi_x": 8,
+      "roi_y": 7
+    }
+  },
+  "set_img_meexposure": {
+    "cmd": "set_img_meexposure",
+    "set_img_meexposure": {
+      "a_gain": 0,
+      "chnn": 0,
+      "expo_type": 0,
+      "shuttertime": 150
+    }
+  },
+  "set_img_awb": {
+    "cmd": "set_img_awb",
+    "set_img_awb": {
+      "awb": "auto",
+      "b": 421,
+      "chnn": 0,
+      "gb": 256,
+      "gr": 256,
+      "r": 628
+    }
+  },
+  "set_img_mirror_flip": {
+    "cmd": "set_img_mirror_flip",
+    "set_img_mirror_flip": {
+      "chnn": 0,
+      "flip": false,
+      "mirror": false
+    }
+  },
+  "set_img_flick_hz": {
+    "cmd": "set_img_flick_hz",
+    "set_img_flick_hz": {
+      "chnn": 0,
+      "flick": false
+    }
+  },
+  "set_motor_demist": {
+    "cmd": "set_motor_demist",
+    "set_motor_demist": {
+      "chnn": 0,
+      "demist": false
+    }
+  },
+  "set_img_hdr_gamma": {
+    "cmd": "set_img_hdr_gamma",
+    "set_img_hdr_gamma": {
+      "chnn": 0,
+      "level": 1
+    }
+  },
+  "set_ipv4": {
+    "cmd": "set_ipv4",
+    "set_ipv4": {
+      "chnn": 0,
+      "dhcp": false,
+      "dns1": "114.114.114.114",
+      "dns2": "8.8.8.8",
+      "gateway": "192.168.3.1",
+      "ip": "192.168.3.222",
+      "netmask": "255.255.255.0",
+      "mac": "00:13:09:FE:45:78"
+    }
+  },
+  "upgrade": {
+    "cmd": "upgrade",
+    "ip": "192.168.3.222",
+    "port": 80,
+    "path": "D:/c313_update.lpk",
+    "upgrade": {
+      "username": "admin",
+      "passwd": "123456"
+    }
+  },
+  "status_upgrade": {
+    "cmd": "status_upgrade",
+    "ip": "192.168.3.222",
+    "port": 80
+  },
+  "img_mode": {
+    "cmd": "img_mode",
+    "img_mode": {
+      "chnn": 0,
+      "idx": 0
+    }
+  },
+  "set_img_mode": {
+    "cmd": "set_img_mode",
+    "set_img_mode": {
+      "chnn": 0,
+      "mode": 0
+    }
+  },
+  "set_img_drc": {
+    "cmd": "set_img_drc",
+    "set_img_drc": {
+      "chnn": 0,
+      "drc": 50
+    }
+  },
+  "set_img_cac": {
+    "cmd": "set_img_cac",
+    "set_img_cac": {
+      "cac": true,
+      "chnn": 0
+    }
+  },
+  "img_drc": {
+    "cmd": "img_drc",
+    "img_drc": {
+      "chnn": 0,
+      "idx": 0
+    }
+  },
+  "img_cac": {
+    "cmd": "img_cac",
+    "img_cac": {
+      "chnn": 0,
+      "idx": 0
+    }
+  },
+  "login": {
+    "cmd": "login",
+    "ip": "192.168.1.230",
+    "login": {
+      "passwd": "123456",
+      "username": "admin"
+    },
+    "port": 80
+  },
+  "set_stream": {
+    "cmd": "set_stream",
+    "set_stream": {
+      "bitrate": 21000,
+      "chnn": 0,
+      "fmt": "mjpeg",
+      "frame_rate": 20,
+      "i_interval": 90,
+      "idx": 0,
+      "quality": "high",
+      "rc_mode": "cbr",
+      "wh": "1280*720"
+    }
+  },
+  "get_stream": {
+    "cmd": "get_stream",
+    "get_stream": {
+      "chnn": 0,
+      "idx": 0
+    }
+  },
+  "open_stream": {
+    "cmd": "open_stream",
+    "open_stream": {
+      "chnn": 0,
+      "idx": 0
+    }
+  },
+  "close_stream": {
+    "cmd": "close_stream",
+    "close_stream": {
+      "chnn": 0,
+      "idx": 0
+    }
+  },
+  "set_stream_pic": {
+    "cmd": "set_stream_pic",
+    "set_stream": {
+      "chnn": 0,
+      "idx": 64,
+      "fmt": "jpeg",
+      "wh": "4000*3000",
+      "quality": "high",
+      "i_interval": 333
+    }
+  },
+  "stream_pic": {
+    "cmd": "stream_pic",
+    "stream_pic": {
+      "chnn": 0,
+      "idx": 64
+    }
+  }
+}
+
