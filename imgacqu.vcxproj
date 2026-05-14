@@ -157,6 +157,7 @@ xcopy $(SolutionDir)third_lib\bluetooth\  $(OutDir) /i /e /y</Command>
     </ClCompile>
     <ClCompile Include="artifact\regdb.cpp" />
     <ClCompile Include="artifact\verifydb.cpp" />
+    <ClCompile Include="artifact\localverifyclient.cpp" />
     <ClCompile Include="artifact\verifythread.cpp" />
     <ClCompile Include="camera\netcamera.cpp" />
     <ClCompile Include="config\appconfig.cpp" />
@@ -262,6 +263,7 @@ xcopy $(SolutionDir)third_lib\bluetooth\  $(OutDir) /i /e /y</Command>
     <QtMoc Include="networkserver\networkserver.h" />
     <QtMoc Include="artifact\regdb.h" />
     <QtMoc Include="artifact\verifydb.h" />
+    <QtMoc Include="artifact\localverifyclient.h" />
     <QtMoc Include="artifact\verifythread.h" />
     <QtMoc Include="networkserver\netimageload.h" />
     <QtMoc Include="autoreplyprint\labelprint.h" />

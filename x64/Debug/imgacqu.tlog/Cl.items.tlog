@@ -4,6 +4,7 @@ E:\project\imgacqu\imgacqu\autoreplyprint\labelprint.cpp;E:\project\imgacqu\imga
 E:\project\imgacqu\imgacqu\camera\usbcamera.cpp;E:\project\imgacqu\imgacqu\x64\Debug\usbcamera.obj
 E:\project\imgacqu\imgacqu\artifact\regdb.cpp;E:\project\imgacqu\imgacqu\x64\Debug\regdb.obj
 E:\project\imgacqu\imgacqu\artifact\verifydb.cpp;E:\project\imgacqu\imgacqu\x64\Debug\verifydb.obj
+E:\project\imgacqu\imgacqu\artifact\localverifyclient.cpp;E:\project\imgacqu\imgacqu\x64\Debug\localverifyclient.obj
 E:\project\imgacqu\imgacqu\artifact\verifythread.cpp;E:\project\imgacqu\imgacqu\x64\Debug\verifythread.obj
 E:\project\imgacqu\imgacqu\camera\netcamera.cpp;E:\project\imgacqu\imgacqu\x64\Debug\netcamera.obj
 E:\project\imgacqu\imgacqu\config\appconfig.cpp;E:\project\imgacqu\imgacqu\x64\Debug\appconfig.obj
@@ -70,6 +71,7 @@ E:\project\imgacqu\imgacqu\x64\Debug\qt\moc\moc_nativemark.cpp;E:\project\imgacq
 E:\project\imgacqu\imgacqu\x64\Debug\qt\moc\moc_networkserver.cpp;E:\project\imgacqu\imgacqu\x64\Debug\moc_networkserver.obj
 E:\project\imgacqu\imgacqu\x64\Debug\qt\moc\moc_regdb.cpp;E:\project\imgacqu\imgacqu\x64\Debug\moc_regdb.obj
 E:\project\imgacqu\imgacqu\x64\Debug\qt\moc\moc_verifydb.cpp;E:\project\imgacqu\imgacqu\x64\Debug\moc_verifydb.obj
+E:\project\imgacqu\imgacqu\x64\Debug\qt\moc\moc_localverifyclient.cpp;E:\project\imgacqu\imgacqu\x64\Debug\moc_localverifyclient.obj
 E:\project\imgacqu\imgacqu\x64\Debug\qt\moc\moc_verifythread.cpp;E:\project\imgacqu\imgacqu\x64\Debug\moc_verifythread.obj
 E:\project\imgacqu\imgacqu\x64\Debug\qt\moc\moc_netimageload.cpp;E:\project\imgacqu\imgacqu\x64\Debug\moc_netimageload.obj
 E:\project\imgacqu\imgacqu\x64\Debug\qt\moc\moc_labelprint.cpp;E:\project\imgacqu\imgacqu\x64\Debug\moc_labelprint.obj

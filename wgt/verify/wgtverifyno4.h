@@ -44,6 +44,7 @@ private slots:
 	void on_radioButtonHgt_clicked();
 	void on_pushButtonPhoto_clicked();
 	void on_pushButtonGoPhoto_clicked();
+	void on_pushButtonVerifyMode_toggled(bool checked);
 
 	void on_toolButtonFocus_clicked();
 	void on_toolButtonRefImage_clicked();

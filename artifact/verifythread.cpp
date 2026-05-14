@@ -1,6 +1,7 @@
 ﻿#include <QtConcurrent>
 #include "verifythread.h"
 #include "appconfig.h"
+#include "localverifyclient.h"
 #include "minios3client.h"
 #include "networkserver.h"
 #include "verifydb.h"
@@ -256,6 +257,13 @@ bool VerifyThread::updateVerifyResult(QString number)
 		return false;
 	}
 	auto verifyData = verifyDataList[number];
+	if (verifyData->isLocalVerify)
+	{
+		Artifact::BaseInfo info = verifyData->baseInfo;
+		info.verifyResult = (verifyData->localVerifyScore >= 60) ? QString::fromUtf8("通过") : QString::fromUtf8("不通过");
+		waitEnd(info.number, info);
+		return true;
+	}
 	if (NetworkServer::instance()->getArtifactsDetailInfo(verifyData->baseInfo.id, verifyData->baseInfo.number, &jsonData, true))
 	{
 		if (jsonData["code"].toInt() == 200 && jsonData["success"].isBool())
@@ -366,6 +374,16 @@ bool VerifyThread::setVerifyNo(QString number, int verifyNo)
 		return false;
 	}
 	verifyDataList[number]->verifyNO = verifyNo;
+	return true;
+}
+bool VerifyThread::setLocalVerifyMode(QString number, bool isLocal)
+{
+	if (!verifyDataList.contains(number))
+	{
+		return false;
+	}
+	verifyDataList[number]->isLocalVerify = isLocal;
+	qDebug() << "VerifyThread::setLocalVerifyMode:" << number << "isLocal:" << isLocal;
 	return true;
 }
 int VerifyThread::getVerifyNo(QString number)
@@ -1200,8 +1218,58 @@ void VerifyThread::doWork()
 			{
 				continue;
 			}
+
+			// 本地验证模式：先运行 Python 算法
+			if (data->isLocalVerify)
+			{
+				QJsonArray pairs;
+				for (auto k = data->rawMarkedImage.begin(); k != data->rawMarkedImage.end(); k++)
+				{
+					QString rawMarkName = k.key();
+					QString rawHighName = rawMarkName;
+					rawHighName.replace("D_01_", "W_02_");
+					QString verifyHighName = gVerifyNameHeader + rawHighName;
+
+					QString img1Path;
+					if (data->rawImageInfo.contains(rawHighName))
+						img1Path = data->rawImageInfo[rawHighName].imageLocalAddr;
+
+					QString img2Path;
+					if (data->imageInfo.contains(verifyHighName))
+						img2Path = data->imageInfo[verifyHighName].imageLocalAddr;
+
+					if (img1Path.isEmpty() || img2Path.isEmpty())
+						continue;
+
+					QJsonObject pair;
+					pair.insert("img1", img1Path);
+					pair.insert("img2", img2Path);
+					pair.insert("name", rawMarkName);
+					pairs.append(pair);
+				}
+
+				if (!pairs.isEmpty())
+				{
+					QJsonObject inputJson;
+					inputJson.insert("pairs", pairs);
+
+					QString errorMsg;
+					QJsonObject outputJson;
+					if (LocalVerifyClient::instance()->verify(inputJson, &outputJson, &errorMsg))
+					{
+						data->localVerifyScore = outputJson["overall_score"].toInt();
+						data->localVerifyRawResult = outputJson;
+					}
+					else
+					{
+						qDebug() << "LocalVerifyClient::verify failed:" << errorMsg;
+						data->localVerifyScore = 0;
+					}
+				}
+			}
+
+			// 构建上传数据（两种模式都需要上传到服务器）
 			QJsonObject jsonData;
-			//jsonData.insert("weight", QString());
 			jsonData.insert("artifact_category", 3);
 			jsonData.insert("sampling_id", data->baseInfo.id);
 			jsonData.insert("weight", "0kg");
@@ -1264,27 +1332,58 @@ void VerifyThread::doWork()
 				jsonData.insert("inspectInfos", inspectInfos);
 			}
 
-
-			qDebug() << "VerifyThread::doWork:jsonData";
-			qDebug().noquote() << QString::fromUtf8(QJsonDocument(jsonData).toJson(QJsonDocument::Indented));
-			bool isOK = false;
-			for (int i = 0; i < 3; i++)
+			// 本地验证模式：先 emit 信号让结果立即展示，再上传到服务器（不阻塞展示）
+			if (data->isLocalVerify)
 			{
-				isOK = NetworkServer::instance()->postArtifactUpData(jsonData,true);
-				if (isOK)
+				QJsonObject localResult;
+				localResult.insert("score", data->localVerifyScore);
+				localResult.insert("status", data->localVerifyScore >= 60 ? QString("通过") : QString("不通过"));
+				localResult.insert("results", data->localVerifyRawResult["results"]);
+				jsonData.insert("local_verify_result", localResult);
+
+				// 立即进入等待状态，下一轮 doWork 就会展示结果
+				emit sigUpDataFinished(data->baseInfo.number);
+
+				// 服务器上传作为后台记录，不影响结果展示
+				qDebug() << "VerifyThread::doWork:jsonData(local)";
+				qDebug().noquote() << QString::fromUtf8(QJsonDocument(jsonData).toJson(QJsonDocument::Indented));
+				for (int i = 0; i < 3; i++)
 				{
-					break;
+					if (NetworkServer::instance()->postArtifactUpData(jsonData, true))
+						break;
 				}
 			}
-			if (isOK)
+			else
 			{
-				
-				//NetworkServer::instance()->postArtifactsStatus(data->baseInfo.id, "已完成",nullptr,true);
-				emit sigUpDataFinished(data->baseInfo.number);
+				qDebug() << "VerifyThread::doWork:jsonData";
+				qDebug().noquote() << QString::fromUtf8(QJsonDocument(jsonData).toJson(QJsonDocument::Indented));
+				bool isOK = false;
+				for (int i = 0; i < 3; i++)
+				{
+					isOK = NetworkServer::instance()->postArtifactUpData(jsonData,true);
+					if (isOK)
+					{
+						break;
+					}
+				}
+				if (isOK)
+				{
+					emit sigUpDataFinished(data->baseInfo.number);
+				}
 			}
 		}
 		else if (i.value()->isVerifyFinished == VerifyData::Verify_Waiting &&count%30 == 0)
 		{ /*获取验证结果*/
+			const auto data = i.value();
+			if (data->isLocalVerify)
+			{
+				// 本地验证：无需轮询服务器，直接构造结果
+				Artifact::BaseInfo info = data->baseInfo;
+				info.verifyResult = (data->localVerifyScore >= 60) ? QString::fromUtf8("通过") : QString::fromUtf8("不通过");
+				emit sigWaitEnd(data->baseInfo.number, info);
+			}
+			else
+			{
 			qDebug() << "VerifyThread::获取验证结果";
             QJsonObject jsonData;
 			if (NetworkServer::instance()->getArtifactsDetailInfo(i.value()->baseInfo.id, i.value()->baseInfo.number, &jsonData, true))
@@ -1331,6 +1430,7 @@ void VerifyThread::doWork()
 					}
 				}
 			}
+			} // end else (server polling)
 		}
 	}
 	count++;

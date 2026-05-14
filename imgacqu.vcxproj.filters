@@ -163,6 +163,9 @@
     <ClCompile Include="artifact\verifydb.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="artifact\localverifyclient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="artifact\verifythread.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -325,6 +328,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="artifact\verifydb.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="artifact\localverifyclient.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="artifact\verifythread.h">

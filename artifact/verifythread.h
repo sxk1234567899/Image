@@ -33,6 +33,9 @@ public:
         Verify_Finished,
     };
     VerifyStatus isVerifyFinished = Verify_LoadRawImage;
+    bool isLocalVerify = false;           // 是否使用本地验证
+    int localVerifyScore = 0;             // 本地验证综合分数 (0-100)
+    QJsonObject localVerifyRawResult;     // 本地验证原始结果
 };
 
 
@@ -81,6 +84,11 @@ public slots:
         return verifyFinished(mCurrNumber);
     }
 
+    bool setLocalVerifyMode(QString number, bool isLocal);
+    inline bool setLocalVerifyMode(bool isLocal)
+    {
+        return setLocalVerifyMode(mCurrNumber, isLocal);
+    }
     bool setVerifyNo(QString number,int verifyNo);
     inline bool setVerifyNo(int verifyNo)
     {

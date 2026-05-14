@@ -19,6 +19,11 @@ WgtVerifyNo4::WgtVerifyNo4(QWidget *parent)
 	ui->pushButtonGoPhoto->setIcon(QIcon(":/image/microscope.png"));
 	ui->pushButtonGoPhoto->setIconSize(QSize(40, 40));
 
+	ui->pushButtonVerifyMode->setIcon(QIcon(":/image/switch.png"));
+	ui->pushButtonVerifyMode->setIconSize(QSize(36, 36));
+	ui->pushButtonVerifyMode->setChecked(false);
+	ui->pushButtonVerifyMode->setToolTip(tr("点击切换为本地验证"));
+
 	ui->labelInfo->setText(QString("现在请您对指纹点拍摄，您可以使用参照功能，为了便于位置确认，参照默认"
 		"\n使用登记时低倍位置图片，您矫正位置后点击切换高倍即可"));
 	ui->videoWidget->installEventFilter(this);
@@ -122,6 +127,9 @@ bool WgtVerifyNo4::updateVerifyData()
 		DlgInfo::messageBox(this, tr("提示"), tr("还有未拍摄的标记图，\n请完成全部指纹图拍摄，再点击下一步。"), tr("确定"), tr("删除"), false);
 		return false;
 	}
+	// 设置验证模式
+	bool isLocal = ui->pushButtonVerifyMode->isChecked();
+	VerifyThread::instance()->setLocalVerifyMode(isLocal);
 	NetCamera::instance()->stop();
 	ui->widgetRawImage->setImage(nullptr);
 	ui->widgetVerifyImage->setImage(nullptr);
@@ -230,6 +238,20 @@ void WgtVerifyNo4::on_pushButtonGoPhoto_clicked()
 {
 	ui->stackedWidgetView->setCurrentWidget(ui->pageVideo);
 	ui->stackedWidgetBtn->setCurrentWidget(ui->pagePhoto);
+}
+
+void WgtVerifyNo4::on_pushButtonVerifyMode_toggled(bool checked)
+{
+	if (checked)
+	{
+		ui->pushButtonVerifyMode->setText(tr("本地验证"));
+		ui->pushButtonVerifyMode->setToolTip(tr("点击切换为服务器验证"));
+	}
+	else
+	{
+		ui->pushButtonVerifyMode->setText(tr("服务器验证"));
+		ui->pushButtonVerifyMode->setToolTip(tr("点击切换为本地验证"));
+	}
 }
 
 void WgtVerifyNo4::on_toolButtonFocus_clicked()

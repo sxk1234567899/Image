@@ -2,7 +2,12 @@
   复制了 1 个文件
    Qt/MSBuild: 3.5.0.0
    Qt: 6.11.0
-  imagewidget.cpp
+  verifythread.cpp
+miniocpp.lib(args.obj) : warning LNK4099: 未找到 PDB“miniocpp.pdb”(使用“miniocpp.lib(args.obj)”或在“E:\project\imgacqu\x64\Debug\miniocpp.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+miniocpp.lib(baseclient.obj) : warning LNK4099: 未找到 PDB“miniocpp.pdb”(使用“miniocpp.lib(baseclient.obj)”或在“E:\project\imgacqu\x64\Debug\miniocpp.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+miniocpp.lib(providers.obj) : warning LNK4099: 未找到 PDB“miniocpp.pdb”(使用“miniocpp.lib(providers.obj)”或在“E:\project\imgacqu\x64\Debug\miniocpp.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+miniocpp.lib(types.obj) : warning LNK4099: 未找到 PDB“miniocpp.pdb”(使用“miniocpp.lib(types.obj)”或在“E:\project\imgacqu\x64\Debug\miniocpp.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+miniocpp.lib(utils.obj) : warning LNK4099: 未找到 PDB“miniocpp.pdb”(使用“miniocpp.lib(utils.obj)”或在“E:\project\imgacqu\x64\Debug\miniocpp.pdb”中寻找)；正在链接对象，如同没有调试信息一样
   imgacqu.vcxproj -> E:\project\imgacqu\x64\Debug\imgacqu.exe
   Qt Deploy: "D:/Qt/6.11.0/msvc2022_64/bin\windeployqt.exe" --list target --qmldir E:\project\imgacqu\imgacqu\ --dir E:\project\imgacqu\x64\Debug\ E:\project\imgacqu\x64\Debug\imgacqu.exe
 EXEC : warning : Cannot find any version of the dxcompiler.dll and dxil.dll.

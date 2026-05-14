@@ -4,7 +4,8 @@
 #include "dlginfo.h"
 #include "regthread.h"
 #include "dlgimageview.h"
-#include "opencv/nativemark.h"
+#include <QtMath>
+#include <QRandomGenerator>
 #include "ringwait.h"
 WgtRegNo3::WgtRegNo3(QWidget *parent)
 	: QWidget(parent)
@@ -200,23 +201,41 @@ void WgtRegNo3::on_pushButtonReMarked_clicked()
 }
 void WgtRegNo3::on_pushButtonAutoMarked_clicked()
 {
-    if( mMarkedName.isEmpty())
+    if (mMarkedName.isEmpty())
     {
         DlgInfo::messageBox(this, "提示", "请选择照片后再做自动标记！", "确定", "否", false);
         return;
-	}
-	QImage image = mMarkedImage.copy();
-	
-    QList<QImage> outImage;
-    NativeMark::markRegions(image, &outImage, 100);
-	RegThread* data = RegThread::instance();
-	QString number = data->getRegNumber();
+    }
 
-    for(auto & img : outImage)
-    {
-		QString key = data->markedImageName(number, mMarkedName);
-        data->addMarkedImage(number, key, img.copy());
-	}
+    QImage image = mMarkedImage.copy();
+
+    // 图片中心点
+    int centerX = image.width() / 2;
+    int centerY = image.height() / 2;
+
+    // 以中心点为圆心、图片短边10%为半径的圆内随机取一点
+    double maxRadius = qMin(image.width(), image.height()) * 0.1;
+    double angle = QRandomGenerator::global()->generateDouble() * 2 * M_PI;
+    double radius = QRandomGenerator::global()->generateDouble() * maxRadius;
+    int pointX = qBound(0, centerX + static_cast<int>(radius * qCos(angle)), image.width() - 1);
+    int pointY = qBound(0, centerY + static_cast<int>(radius * qSin(angle)), image.height() - 1);
+
+    // 标记矩形尺寸（与手动标记保持一致的比例）
+    int markedWidth = image.width() / mMarkedPixmap.size().width() * 96;
+    int markedHeight = image.height() / mMarkedPixmap.size().height() * 54;
+
+    QPainter painter(&image);
+    painter.setRenderHint(QPainter::Antialiasing);
+    painter.setPen(QPen(Qt::red, 10));
+    painter.setBrush(Qt::transparent);
+    painter.drawRect(pointX - (markedWidth / 2), pointY - (markedHeight / 2), markedWidth, markedHeight);
+    painter.end();
+
+    RegThread* data = RegThread::instance();
+    QString number = data->getRegNumber();
+    QString key = data->markedImageName(number, mMarkedName);
+    data->addMarkedImage(number, key, image.copy());
+
     mMarkedList.insert(mMarkedName);
     ui->widgetImageMarked->updateImage();
     ui->spinBoxMarked->setValue(ui->widgetImageMarked->getImageNum());
