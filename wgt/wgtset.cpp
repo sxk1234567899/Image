@@ -18,6 +18,7 @@ WgtSet::WgtSet(QWidget *parent)
 	, mButtonSetGroup(new QButtonGroup(this))
 	, mButtonSetNet(new QButtonGroup(this))
 	, mShowTimer(new QTimer(this))
+	, mNetworkSpeedTester(nullptr)
 {
 	ui->setupUi(this);
 	mWgtMain = qobject_cast<WgtMain*>(this->parent());
@@ -134,8 +135,8 @@ WgtSet::WgtSet(QWidget *parent)
 
 WgtSet::~WgtSet()
 {
-	//delete mNetworkSpeedTester;
-	//mNetworkSpeedTester = nullptr;
+	delete mNetworkSpeedTester;
+	mNetworkSpeedTester = nullptr;
 	delete ui;
 }
 void WgtSet::showEvent(QShowEvent* event)
