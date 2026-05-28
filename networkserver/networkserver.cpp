@@ -390,6 +390,7 @@ QList<Artifact::BaseInfo> NetworkServer::getArtifactsList(int batchId,int page, 
         {
             Artifact::BaseInfo info;
             QJsonObject infoObj = value.toObject();
+
             info.id = infoObj["id"].toInt();
             info.deptId = infoObj["dept_id"].toInt();
             info.number = infoObj["artifact_number"].toString();
@@ -402,7 +403,7 @@ QList<Artifact::BaseInfo> NetworkServer::getArtifactsList(int batchId,int page, 
             info.stauts = infoObj["inspect_status"].toString();
             info.unitId = infoObj["unit_id"].toInt();
             info.weight = infoObj["weight"].toInt();
-            info.createTime = infoObj["created_at"].toString();
+            info.createTime = infoObj["end_time"].toString();
             info.updateTime = infoObj["updated_at"].toString();
             // info.result = infoObj["result"].toString();
             if (infoObj["unit"].isObject() && infoObj["unit"].toObject().contains("nickname"))
@@ -501,6 +502,8 @@ bool NetworkServer::getArtifactsDetailInfo(int id, QString number, QJsonObject* 
         return false;
     }
     responseData = reply->readAll();
+
+   
     reply->deleteLater();
     QJsonObject responseJson = QJsonDocument::fromJson(responseData).object();
     if (responseJson.isEmpty())
@@ -537,6 +540,8 @@ bool NetworkServer::getArtifactsDetailInfo(int id, QString number, Artifact::Bas
     {
         Artifact::BaseInfo info;
         QJsonObject infoObj = jsonData["data"].toObject()["detail"].toObject();
+
+        qDebug().noquote() << QString::fromUtf8(QJsonDocument(infoObj).toJson(QJsonDocument::Indented));
         info.id = infoObj["id"].toInt();
         info.deptId = infoObj["dept_id"].toInt();
         info.number = infoObj["artifact_number"].toString();
@@ -549,6 +554,8 @@ bool NetworkServer::getArtifactsDetailInfo(int id, QString number, Artifact::Bas
         info.stauts = infoObj["status"].toString();
         info.unitId = infoObj["unit_id"].toInt();
         info.weight = infoObj["weight"].toInt();
+
+        info.createTime = infoObj["around_infos"].toArray().at(0).toObject()["sampling_infos"].toArray().at(0).toObject()["created_at"].toString();
         // info.result = infoObj["result"].toString();
         if (infoObj["unit"].isObject() && infoObj["unit"].toObject().contains("nickname"))
         {

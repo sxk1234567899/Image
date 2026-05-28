@@ -269,6 +269,8 @@ bool VerifyThread::updateVerifyResult(QString number)
 		if (jsonData["code"].toInt() == 200 && jsonData["success"].isBool())
 		{
 			Artifact::BaseInfo info = verifyData->baseInfo;
+
+			qDebug() << QJsonDocument(jsonData).toJson(QJsonDocument::Indented);
 			QJsonObject infoObj = jsonData["data"].toObject()["details"].toObject();
 			info.id = infoObj["id"].toInt();
 			info.deptId = infoObj["dept_id"].toInt();
@@ -284,9 +286,9 @@ bool VerifyThread::updateVerifyResult(QString number)
 			info.weight = infoObj["weight"].toInt();
 
 			info.remarks = infoObj["remarks"].toString();
-			info.createTime = infoObj["created_at"].toString();
+			info.createTime = jsonData["data"].toObject()["contrast"].toObject()["inspectAround"].toArray().at(0).toObject()["sampling_around"].toObject()["created_at"].toString();
 			info.updateTime = infoObj["updated_at"].toString();
-			info.verifyTime	= infoObj["updated_at"].toString();
+			info.verifyTime = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
 			QJsonArray deptsData = infoObj["unit"].toObject()["depts"].toArray();
 			if (deptsData.size() > 0)
 			{
@@ -1223,29 +1225,30 @@ void VerifyThread::doWork()
 			if (data->isLocalVerify)
 			{
 				QJsonArray pairs;
-				for (auto k = data->rawMarkedImage.begin(); k != data->rawMarkedImage.end(); k++)
-				{
-					QString rawMarkName = k.key();
-					QString rawHighName = rawMarkName;
-					rawHighName.replace("D_01_", "W_02_");
-					QString verifyHighName = gVerifyNameHeader + rawHighName;
-
+				auto addPair = [&](const QString& rawName, const QString& verifyName, const QString& posName, const QString& type) {
 					QString img1Path;
-					if (data->rawImageInfo.contains(rawHighName))
-						img1Path = data->rawImageInfo[rawHighName].imageLocalAddr;
-
+					if (data->rawImageInfo.contains(rawName))
+						img1Path = data->rawImageInfo[rawName].imageLocalAddr;
 					QString img2Path;
-					if (data->imageInfo.contains(verifyHighName))
-						img2Path = data->imageInfo[verifyHighName].imageLocalAddr;
-
+					if (data->imageInfo.contains(verifyName))
+						img2Path = data->imageInfo[verifyName].imageLocalAddr;
 					if (img1Path.isEmpty() || img2Path.isEmpty())
-						continue;
-
+						return;
 					QJsonObject pair;
 					pair.insert("img1", img1Path);
 					pair.insert("img2", img2Path);
-					pair.insert("name", rawMarkName);
+					pair.insert("name", posName);
+					pair.insert("type", type);
 					pairs.append(pair);
+					};
+				for (auto k = data->rawMarkedImage.begin(); k != data->rawMarkedImage.end(); k++)
+				{
+					QString rawMarkName = k.key();
+					QString globalKey = rawMarkName.left(12);
+					addPair(globalKey, gVerifyNameHeader + globalKey, rawMarkName, "global");
+					QString rawHighName = rawMarkName;
+					rawHighName.replace("D_01_", "W_02_");
+					addPair(rawHighName, gVerifyNameHeader + rawHighName, rawMarkName, "high");
 				}
 
 				if (!pairs.isEmpty())
@@ -1257,6 +1260,8 @@ void VerifyThread::doWork()
 					QJsonObject outputJson;
 					if (LocalVerifyClient::instance()->verify(inputJson, &outputJson, &errorMsg))
 					{
+
+						qDebug() << "LocalVerifyClient: raw outputData:" << outputJson;
 						data->localVerifyScore = outputJson["overall_score"].toInt();
 						data->localVerifyRawResult = outputJson;
 					}
@@ -1268,10 +1273,11 @@ void VerifyThread::doWork()
 				}
 			}
 
-			// 构建上传数据（两种模式都需要上传到服务器）
 			QJsonObject jsonData;
+			//jsonData.insert("weight", QString());
 			jsonData.insert("artifact_category", 3);
 			jsonData.insert("sampling_id", data->baseInfo.id);
+			jsonData.insert("main_image", data->baseInfo.mainImageAddr);
 			jsonData.insert("weight", "0kg");
 			QJsonArray aroundInfos;
 			for (auto j = data->globalImage.begin(); j != data->globalImage.end(); ++j)
@@ -1332,6 +1338,7 @@ void VerifyThread::doWork()
 				jsonData.insert("inspectInfos", inspectInfos);
 			}
 
+
 			// 本地验证模式：先 emit 信号让结果立即展示，再上传到服务器（不阻塞展示）
 			if (data->isLocalVerify)
 			{
@@ -1360,7 +1367,7 @@ void VerifyThread::doWork()
 				bool isOK = false;
 				for (int i = 0; i < 3; i++)
 				{
-					isOK = NetworkServer::instance()->postArtifactUpData(jsonData,true);
+					isOK = NetworkServer::instance()->postArtifactUpData(jsonData, true);
 					if (isOK)
 					{
 						break;
@@ -1372,7 +1379,7 @@ void VerifyThread::doWork()
 				}
 			}
 		}
-		else if (i.value()->isVerifyFinished == VerifyData::Verify_Waiting &&count%30 == 0)
+		else if (i.value()->isVerifyFinished == VerifyData::Verify_Waiting && count % 30 == 0)
 		{ /*获取验证结果*/
 			const auto data = i.value();
 			if (data->isLocalVerify)
@@ -1384,52 +1391,54 @@ void VerifyThread::doWork()
 			}
 			else
 			{
-			qDebug() << "VerifyThread::获取验证结果";
-            QJsonObject jsonData;
-			if (NetworkServer::instance()->getArtifactsDetailInfo(i.value()->baseInfo.id, i.value()->baseInfo.number, &jsonData, true))
-			{
-				if (jsonData["code"].toInt() == 200 && jsonData["success"].isBool())
+				qDebug() << "VerifyThread::获取验证结果";
+				QJsonObject jsonData;
+				if (NetworkServer::instance()->getArtifactsDetailInfo(i.value()->baseInfo.id, i.value()->baseInfo.number, &jsonData, true))
 				{
-					Artifact::BaseInfo info;
-					QJsonObject infoObj = jsonData["data"].toObject()["details"].toObject();
-					info.id = infoObj["id"].toInt();
-					info.deptId = infoObj["dept_id"].toInt();
-					info.number = infoObj["artifact_number"].toString();
-					info.mainImageAddr = infoObj["main_image"].toString();
-					info.name = infoObj["artifact_name"].toString();
-					info.size = infoObj["size"].toString();
-					info.age = infoObj["age"].toString();
-					info.texture = infoObj["texture"].toString();
-					info.level = infoObj["level"].toString();
-					info.stauts = infoObj["status"].toString();
-					info.unitId = infoObj["unit_id"].toInt();
-					info.weight = infoObj["weight"].toInt();
-					
-					info.remarks = infoObj["remarks"].toString();
-					info.createTime = infoObj["created_at"].toString();
-					info.updateTime = infoObj["updated_at"].toString();
+					if (jsonData["code"].toInt() == 200 && jsonData["success"].isBool())
+					{
+						Artifact::BaseInfo info;
+						QJsonObject infoObj = jsonData["data"].toObject()["details"].toObject();
+						qDebug().noquote() << QString::fromUtf8(QJsonDocument(jsonData["data"].toObject()).toJson(QJsonDocument::Indented));
 
-					QJsonArray deptsData = infoObj["unit"].toObject()["depts"].toArray();
-					if (deptsData.size() > 0)
-					{
-						QJsonObject deptData = deptsData[0].toObject();
-						info.regAgency = deptData["name"].toString();		
-					}
-					if (jsonData["data"].toObject()["verifyResult"].isObject())
-					{
-						info.verifyResult = jsonData["data"].toObject()["verifyResult"].toObject()["verify_status"].toString();
-					}
-					else
-					{
-                        info.verifyResult = "未验证";
-					}
-					
-					if (info.verifyResult != "未验证" && info.verifyResult != "验证中" &&info.number == i.key())
-					{
-						emit sigWaitEnd(i.key(), info);
+						info.id = infoObj["id"].toInt();
+						info.deptId = infoObj["dept_id"].toInt();
+						info.number = infoObj["artifact_number"].toString();
+						info.mainImageAddr = infoObj["main_image"].toString();
+						info.name = infoObj["artifact_name"].toString();
+						info.size = infoObj["size"].toString();
+						info.age = infoObj["age"].toString();
+						info.texture = infoObj["texture"].toString();
+						info.level = infoObj["level"].toString();
+						info.stauts = infoObj["status"].toString();
+						info.unitId = infoObj["unit_id"].toInt();
+						info.weight = infoObj["weight"].toInt();
+
+						info.remarks = infoObj["remarks"].toString();
+						info.createTime = jsonData["data"].toObject()["contrast"].toObject()["inspectAround"].toArray().at(0).toObject()["sampling_around"].toObject()["created_at"].toString();
+						info.updateTime = infoObj["updated_at"].toString();
+
+						QJsonArray deptsData = infoObj["unit"].toObject()["depts"].toArray();
+						if (deptsData.size() > 0)
+						{
+							QJsonObject deptData = deptsData[0].toObject();
+							info.regAgency = deptData["name"].toString();
+						}
+						if (jsonData["data"].toObject()["verifyResult"].isObject())
+						{
+							info.verifyResult = jsonData["data"].toObject()["verifyResult"].toObject()["verify_status"].toString();
+						}
+						else
+						{
+							info.verifyResult = "未验证";
+						}
+
+						if (info.verifyResult != "未验证" && info.verifyResult != "验证中" && info.number == i.key())
+						{
+							emit sigWaitEnd(i.key(), info);
+						}
 					}
 				}
-			}
 			} // end else (server polling)
 		}
 	}

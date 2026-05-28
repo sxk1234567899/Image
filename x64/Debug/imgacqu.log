@@ -2,7 +2,7 @@
   复制了 1 个文件
    Qt/MSBuild: 3.5.0.0
    Qt: 6.11.0
-  wgtset.cpp
+  wgtverifyno2.cpp
   imgacqu.vcxproj -> E:\project\imgacqu\x64\Debug\imgacqu.exe
   Qt Deploy: "D:/Qt/6.11.0/msvc2022_64/bin\windeployqt.exe" --list target --qmldir E:\project\imgacqu\imgacqu\ --dir E:\project\imgacqu\x64\Debug\ E:\project\imgacqu\x64\Debug\imgacqu.exe
 EXEC : warning : Cannot find any version of the dxcompiler.dll and dxil.dll.

@@ -291,7 +291,7 @@ void WgtVerifyNo4::on_toolButtonRefImage_clicked()
 		mWgtVerifyNo41->refImageType = WgtVerifyNo41::None;
 		break;
 	}
-	if (isHgtPhoto)
+	if (ui->radioButtonHgt->isChecked())
 	{
 		mWgtVerifyNo41->refImage = mRawHgtImage.copy();
 	}

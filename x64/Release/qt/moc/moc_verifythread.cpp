@@ -64,6 +64,8 @@ template <> constexpr inline auto VerifyThread::qt_create_metaobjectdata<qt_meta
         "getBatchInfo",
         "loadRawImageFinished",
         "verifyFinished",
+        "setLocalVerifyMode",
+        "isLocal",
         "setVerifyNo",
         "verifyNo",
         "getVerifyNo",
@@ -201,268 +203,276 @@ template <> constexpr inline auto VerifyThread::qt_create_metaobjectdata<qt_meta
         }}),
         // Slot 'verifyFinished'
         QtMocHelpers::SlotData<bool()>(25, 2, QMC::AccessPublic, QMetaType::Bool),
-        // Slot 'setVerifyNo'
-        QtMocHelpers::SlotData<bool(QString, int)>(26, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 3 }, { QMetaType::Int, 27 },
+        // Slot 'setLocalVerifyMode'
+        QtMocHelpers::SlotData<bool(QString, bool)>(26, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 3 }, { QMetaType::Bool, 27 },
+        }}),
+        // Slot 'setLocalVerifyMode'
+        QtMocHelpers::SlotData<bool(bool)>(26, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::Bool, 27 },
         }}),
         // Slot 'setVerifyNo'
-        QtMocHelpers::SlotData<bool(int)>(26, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::Int, 27 },
+        QtMocHelpers::SlotData<bool(QString, int)>(28, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 3 }, { QMetaType::Int, 29 },
+        }}),
+        // Slot 'setVerifyNo'
+        QtMocHelpers::SlotData<bool(int)>(28, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::Int, 29 },
         }}),
         // Slot 'getVerifyNo'
-        QtMocHelpers::SlotData<int(QString)>(28, 2, QMC::AccessPublic, QMetaType::Int, {{
+        QtMocHelpers::SlotData<int(QString)>(30, 2, QMC::AccessPublic, QMetaType::Int, {{
             { QMetaType::QString, 3 },
         }}),
         // Slot 'getVerifyNo'
-        QtMocHelpers::SlotData<int()>(28, 2, QMC::AccessPublic, QMetaType::Int),
+        QtMocHelpers::SlotData<int()>(30, 2, QMC::AccessPublic, QMetaType::Int),
         // Slot 'getVerifyNumber'
-        QtMocHelpers::SlotData<QString()>(29, 2, QMC::AccessPublic, QMetaType::QString),
+        QtMocHelpers::SlotData<QString()>(31, 2, QMC::AccessPublic, QMetaType::QString),
         // Slot 'setVerifyNumber'
-        QtMocHelpers::SlotData<bool(QString)>(30, 2, QMC::AccessPublic, QMetaType::Bool, {{
+        QtMocHelpers::SlotData<bool(QString)>(32, 2, QMC::AccessPublic, QMetaType::Bool, {{
             { QMetaType::QString, 3 },
         }}),
         // Slot 'getVerifyDataList'
-        QtMocHelpers::SlotData<QStringList()>(31, 2, QMC::AccessPublic, QMetaType::QStringList),
+        QtMocHelpers::SlotData<QStringList()>(33, 2, QMC::AccessPublic, QMetaType::QStringList),
         // Slot 'getVerifyData'
-        QtMocHelpers::SlotData<const VerifyData *(QString, bool *) const>(32, 2, QMC::AccessPublic, 0x80000000 | 33, {{
-            { QMetaType::QString, 3 }, { 0x80000000 | 34, 35 },
+        QtMocHelpers::SlotData<const VerifyData *(QString, bool *) const>(34, 2, QMC::AccessPublic, 0x80000000 | 35, {{
+            { QMetaType::QString, 3 }, { 0x80000000 | 36, 37 },
         }}),
         // Slot 'getVerifyData'
-        QtMocHelpers::SlotData<const VerifyData *(QString) const>(32, 2, QMC::AccessPublic | QMC::MethodCloned, 0x80000000 | 33, {{
+        QtMocHelpers::SlotData<const VerifyData *(QString) const>(34, 2, QMC::AccessPublic | QMC::MethodCloned, 0x80000000 | 35, {{
             { QMetaType::QString, 3 },
         }}),
         // Slot 'getVerifyData'
-        QtMocHelpers::SlotData<const VerifyData *(bool *) const>(32, 2, QMC::AccessPublic, 0x80000000 | 33, {{
-            { 0x80000000 | 34, 35 },
+        QtMocHelpers::SlotData<const VerifyData *(bool *) const>(34, 2, QMC::AccessPublic, 0x80000000 | 35, {{
+            { 0x80000000 | 36, 37 },
         }}),
         // Slot 'getVerifyData'
-        QtMocHelpers::SlotData<const VerifyData *() const>(32, 2, QMC::AccessPublic | QMC::MethodCloned, 0x80000000 | 33),
+        QtMocHelpers::SlotData<const VerifyData *() const>(34, 2, QMC::AccessPublic | QMC::MethodCloned, 0x80000000 | 35),
         // Slot 'addMainImage'
-        QtMocHelpers::SlotData<bool(QString, QString)>(36, 2, QMC::AccessPublic, QMetaType::Bool, {{
+        QtMocHelpers::SlotData<bool(QString, QString)>(38, 2, QMC::AccessPublic, QMetaType::Bool, {{
             { QMetaType::QString, 3 }, { QMetaType::QString, 7 },
         }}),
         // Slot 'addMainImage'
-        QtMocHelpers::SlotData<bool(QString)>(36, 2, QMC::AccessPublic, QMetaType::Bool, {{
+        QtMocHelpers::SlotData<bool(QString)>(38, 2, QMC::AccessPublic, QMetaType::Bool, {{
             { QMetaType::QString, 7 },
         }}),
         // Slot 'getMainImage'
-        QtMocHelpers::SlotData<QImage(QString)>(37, 2, QMC::AccessPublic, 0x80000000 | 38, {{
+        QtMocHelpers::SlotData<QImage(QString)>(39, 2, QMC::AccessPublic, 0x80000000 | 40, {{
             { QMetaType::QString, 3 },
         }}),
         // Slot 'getMainImage'
-        QtMocHelpers::SlotData<QImage()>(37, 2, QMC::AccessPublic, 0x80000000 | 38),
+        QtMocHelpers::SlotData<QImage()>(39, 2, QMC::AccessPublic, 0x80000000 | 40),
         // Slot 'globalImageName'
-        QtMocHelpers::SlotData<QString(QString, int)>(39, 2, QMC::AccessPublic, QMetaType::QString, {{
-            { QMetaType::QString, 3 }, { QMetaType::Int, 40 },
+        QtMocHelpers::SlotData<QString(QString, int)>(41, 2, QMC::AccessPublic, QMetaType::QString, {{
+            { QMetaType::QString, 3 }, { QMetaType::Int, 42 },
         }}),
         // Slot 'globalImageName'
-        QtMocHelpers::SlotData<QString(int)>(39, 2, QMC::AccessPublic, QMetaType::QString, {{
-            { QMetaType::Int, 40 },
+        QtMocHelpers::SlotData<QString(int)>(41, 2, QMC::AccessPublic, QMetaType::QString, {{
+            { QMetaType::Int, 42 },
         }}),
         // Slot 'lowImageName'
-        QtMocHelpers::SlotData<QString(QString, QString, bool)>(41, 2, QMC::AccessPublic, QMetaType::QString, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 42 }, { QMetaType::Bool, 43 },
+        QtMocHelpers::SlotData<QString(QString, QString, bool)>(43, 2, QMC::AccessPublic, QMetaType::QString, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 44 }, { QMetaType::Bool, 45 },
         }}),
         // Slot 'lowImageName'
-        QtMocHelpers::SlotData<QString(QString, QString)>(41, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::QString, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 42 },
+        QtMocHelpers::SlotData<QString(QString, QString)>(43, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::QString, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 44 },
         }}),
         // Slot 'lowImageName'
-        QtMocHelpers::SlotData<QString(QString, bool)>(41, 2, QMC::AccessPublic, QMetaType::QString, {{
-            { QMetaType::QString, 42 }, { QMetaType::Bool, 43 },
+        QtMocHelpers::SlotData<QString(QString, bool)>(43, 2, QMC::AccessPublic, QMetaType::QString, {{
+            { QMetaType::QString, 44 }, { QMetaType::Bool, 45 },
         }}),
         // Slot 'lowImageName'
-        QtMocHelpers::SlotData<QString(QString)>(41, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::QString, {{
-            { QMetaType::QString, 42 },
+        QtMocHelpers::SlotData<QString(QString)>(43, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::QString, {{
+            { QMetaType::QString, 44 },
         }}),
         // Slot 'highImageName'
-        QtMocHelpers::SlotData<QString(QString, QString, bool)>(44, 2, QMC::AccessPublic, QMetaType::QString, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 41 }, { QMetaType::Bool, 43 },
+        QtMocHelpers::SlotData<QString(QString, QString, bool)>(46, 2, QMC::AccessPublic, QMetaType::QString, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 43 }, { QMetaType::Bool, 45 },
         }}),
         // Slot 'highImageName'
-        QtMocHelpers::SlotData<QString(QString, QString)>(44, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::QString, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 41 },
+        QtMocHelpers::SlotData<QString(QString, QString)>(46, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::QString, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 43 },
         }}),
         // Slot 'highImageName'
-        QtMocHelpers::SlotData<QString(QString, bool)>(44, 2, QMC::AccessPublic, QMetaType::QString, {{
-            { QMetaType::QString, 41 }, { QMetaType::Bool, 43 },
+        QtMocHelpers::SlotData<QString(QString, bool)>(46, 2, QMC::AccessPublic, QMetaType::QString, {{
+            { QMetaType::QString, 43 }, { QMetaType::Bool, 45 },
         }}),
         // Slot 'highImageName'
-        QtMocHelpers::SlotData<QString(QString)>(44, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::QString, {{
-            { QMetaType::QString, 41 },
+        QtMocHelpers::SlotData<QString(QString)>(46, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::QString, {{
+            { QMetaType::QString, 43 },
         }}),
         // Slot 'deleteVerifyData'
-        QtMocHelpers::SlotData<bool(QString)>(45, 2, QMC::AccessPublic, QMetaType::Bool, {{
+        QtMocHelpers::SlotData<bool(QString)>(47, 2, QMC::AccessPublic, QMetaType::Bool, {{
             { QMetaType::QString, 3 },
         }}),
         // Slot 'deleteVerifyData'
-        QtMocHelpers::SlotData<bool()>(45, 2, QMC::AccessPublic, QMetaType::Bool),
+        QtMocHelpers::SlotData<bool()>(47, 2, QMC::AccessPublic, QMetaType::Bool),
         // Slot 'addGlobalImage'
-        QtMocHelpers::SlotData<bool(QString, QString, QImage, int)>(46, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 7 }, { 0x80000000 | 38, 47 }, { QMetaType::Int, 48 },
+        QtMocHelpers::SlotData<bool(QString, QString, QImage, int)>(48, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 7 }, { 0x80000000 | 40, 49 }, { QMetaType::Int, 50 },
         }}),
         // Slot 'addGlobalImage'
-        QtMocHelpers::SlotData<bool(QString, QImage, int)>(46, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 7 }, { 0x80000000 | 38, 47 }, { QMetaType::Int, 48 },
+        QtMocHelpers::SlotData<bool(QString, QImage, int)>(48, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 7 }, { 0x80000000 | 40, 49 }, { QMetaType::Int, 50 },
         }}),
         // Slot 'addLowImage'
-        QtMocHelpers::SlotData<bool(QString, QString, QImage, int)>(49, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 7 }, { 0x80000000 | 38, 47 }, { QMetaType::Int, 48 },
+        QtMocHelpers::SlotData<bool(QString, QString, QImage, int)>(51, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 7 }, { 0x80000000 | 40, 49 }, { QMetaType::Int, 50 },
         }}),
         // Slot 'addLowImage'
-        QtMocHelpers::SlotData<bool(QString, QImage, int)>(49, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 7 }, { 0x80000000 | 38, 47 }, { QMetaType::Int, 48 },
+        QtMocHelpers::SlotData<bool(QString, QImage, int)>(51, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 7 }, { 0x80000000 | 40, 49 }, { QMetaType::Int, 50 },
         }}),
         // Slot 'addHighImage'
-        QtMocHelpers::SlotData<bool(QString, QString, QImage, int)>(50, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 7 }, { 0x80000000 | 38, 47 }, { QMetaType::Int, 48 },
+        QtMocHelpers::SlotData<bool(QString, QString, QImage, int)>(52, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 7 }, { 0x80000000 | 40, 49 }, { QMetaType::Int, 50 },
         }}),
         // Slot 'addHighImage'
-        QtMocHelpers::SlotData<bool(QString, QImage, int)>(50, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 7 }, { 0x80000000 | 38, 47 }, { QMetaType::Int, 48 },
+        QtMocHelpers::SlotData<bool(QString, QImage, int)>(52, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 7 }, { 0x80000000 | 40, 49 }, { QMetaType::Int, 50 },
         }}),
         // Slot 'deleteGlobalImage'
-        QtMocHelpers::SlotData<bool(QString, QString)>(51, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 7 },
-        }}),
-        // Slot 'deleteGlobalImage'
-        QtMocHelpers::SlotData<bool(QString)>(51, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 7 },
-        }}),
-        // Slot 'deleteLowImage'
-        QtMocHelpers::SlotData<bool(QString, QString)>(52, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 7 },
-        }}),
-        // Slot 'deleteLowImage'
-        QtMocHelpers::SlotData<bool(QString)>(52, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 7 },
-        }}),
-        // Slot 'deleteHighImage'
         QtMocHelpers::SlotData<bool(QString, QString)>(53, 2, QMC::AccessPublic, QMetaType::Bool, {{
             { QMetaType::QString, 3 }, { QMetaType::QString, 7 },
         }}),
-        // Slot 'deleteHighImage'
+        // Slot 'deleteGlobalImage'
         QtMocHelpers::SlotData<bool(QString)>(53, 2, QMC::AccessPublic, QMetaType::Bool, {{
             { QMetaType::QString, 7 },
         }}),
-        // Slot 'deleteAllMarkImage'
+        // Slot 'deleteLowImage'
+        QtMocHelpers::SlotData<bool(QString, QString)>(54, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 7 },
+        }}),
+        // Slot 'deleteLowImage'
         QtMocHelpers::SlotData<bool(QString)>(54, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 7 },
+        }}),
+        // Slot 'deleteHighImage'
+        QtMocHelpers::SlotData<bool(QString, QString)>(55, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 7 },
+        }}),
+        // Slot 'deleteHighImage'
+        QtMocHelpers::SlotData<bool(QString)>(55, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 7 },
+        }}),
+        // Slot 'deleteAllMarkImage'
+        QtMocHelpers::SlotData<bool(QString)>(56, 2, QMC::AccessPublic, QMetaType::Bool, {{
             { QMetaType::QString, 3 },
         }}),
         // Slot 'deleteAllMarkImage'
-        QtMocHelpers::SlotData<bool()>(54, 2, QMC::AccessPublic, QMetaType::Bool),
+        QtMocHelpers::SlotData<bool()>(56, 2, QMC::AccessPublic, QMetaType::Bool),
         // Slot 'updateImageInfo'
-        QtMocHelpers::SlotData<bool(QString, QString, ImageInfo)>(55, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 56 }, { 0x80000000 | 57, 16 },
+        QtMocHelpers::SlotData<bool(QString, QString, ImageInfo)>(57, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 58 }, { 0x80000000 | 59, 16 },
         }}),
         // Slot 'updateImageInfo'
-        QtMocHelpers::SlotData<bool(QString, ImageInfo)>(55, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 56 }, { 0x80000000 | 57, 16 },
+        QtMocHelpers::SlotData<bool(QString, ImageInfo)>(57, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 58 }, { 0x80000000 | 59, 16 },
         }}),
         // Slot 'getImageInfo'
-        QtMocHelpers::SlotData<bool(QString, QString, ImageInfo *) const>(58, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 56 }, { 0x80000000 | 59, 16 },
+        QtMocHelpers::SlotData<bool(QString, QString, ImageInfo *) const>(60, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 58 }, { 0x80000000 | 61, 16 },
         }}),
         // Slot 'getImageInfo'
-        QtMocHelpers::SlotData<bool(QString, ImageInfo *) const>(58, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 56 }, { 0x80000000 | 59, 16 },
+        QtMocHelpers::SlotData<bool(QString, ImageInfo *) const>(60, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 58 }, { 0x80000000 | 61, 16 },
         }}),
         // Slot 'addRawGlobalImage'
-        QtMocHelpers::SlotData<bool(QString, QString, QImage, ImageInfo)>(60, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 7 }, { 0x80000000 | 38, 47 }, { 0x80000000 | 57, 16 },
-        }}),
-        // Slot 'addRawGlobalImage'
-        QtMocHelpers::SlotData<bool(QString, QImage, ImageInfo)>(60, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 7 }, { 0x80000000 | 38, 47 }, { 0x80000000 | 57, 16 },
-        }}),
-        // Slot 'addRawMarkedImage'
-        QtMocHelpers::SlotData<bool(QString, QString, QImage, ImageInfo)>(61, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 7 }, { 0x80000000 | 38, 47 }, { 0x80000000 | 57, 16 },
-        }}),
-        // Slot 'addRawMarkedImage'
-        QtMocHelpers::SlotData<bool(QString, QImage, ImageInfo)>(61, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 7 }, { 0x80000000 | 38, 47 }, { 0x80000000 | 57, 16 },
-        }}),
-        // Slot 'addRawLowImage'
         QtMocHelpers::SlotData<bool(QString, QString, QImage, ImageInfo)>(62, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 7 }, { 0x80000000 | 38, 47 }, { 0x80000000 | 57, 16 },
+            { QMetaType::QString, 3 }, { QMetaType::QString, 7 }, { 0x80000000 | 40, 49 }, { 0x80000000 | 59, 16 },
+        }}),
+        // Slot 'addRawGlobalImage'
+        QtMocHelpers::SlotData<bool(QString, QImage, ImageInfo)>(62, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 7 }, { 0x80000000 | 40, 49 }, { 0x80000000 | 59, 16 },
+        }}),
+        // Slot 'addRawMarkedImage'
+        QtMocHelpers::SlotData<bool(QString, QString, QImage, ImageInfo)>(63, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 7 }, { 0x80000000 | 40, 49 }, { 0x80000000 | 59, 16 },
+        }}),
+        // Slot 'addRawMarkedImage'
+        QtMocHelpers::SlotData<bool(QString, QImage, ImageInfo)>(63, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 7 }, { 0x80000000 | 40, 49 }, { 0x80000000 | 59, 16 },
         }}),
         // Slot 'addRawLowImage'
-        QtMocHelpers::SlotData<bool(QString, QImage, ImageInfo)>(62, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 7 }, { 0x80000000 | 38, 47 }, { 0x80000000 | 57, 16 },
+        QtMocHelpers::SlotData<bool(QString, QString, QImage, ImageInfo)>(64, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 7 }, { 0x80000000 | 40, 49 }, { 0x80000000 | 59, 16 },
+        }}),
+        // Slot 'addRawLowImage'
+        QtMocHelpers::SlotData<bool(QString, QImage, ImageInfo)>(64, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 7 }, { 0x80000000 | 40, 49 }, { 0x80000000 | 59, 16 },
         }}),
         // Slot 'addRawHighImage'
-        QtMocHelpers::SlotData<bool(QString, QString, QImage, ImageInfo)>(63, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 7 }, { 0x80000000 | 38, 47 }, { 0x80000000 | 57, 16 },
+        QtMocHelpers::SlotData<bool(QString, QString, QImage, ImageInfo)>(65, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 7 }, { 0x80000000 | 40, 49 }, { 0x80000000 | 59, 16 },
         }}),
         // Slot 'addRawHighImage'
-        QtMocHelpers::SlotData<bool(QString, QImage, ImageInfo)>(63, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 7 }, { 0x80000000 | 38, 47 }, { 0x80000000 | 57, 16 },
+        QtMocHelpers::SlotData<bool(QString, QImage, ImageInfo)>(65, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 7 }, { 0x80000000 | 40, 49 }, { 0x80000000 | 59, 16 },
         }}),
         // Slot 'deleteRawGlobalImage'
-        QtMocHelpers::SlotData<bool(QString, QString)>(64, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 7 },
-        }}),
-        // Slot 'deleteRawGlobalImage'
-        QtMocHelpers::SlotData<bool(QString)>(64, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 7 },
-        }}),
-        // Slot 'deleteRawMarkedImage'
-        QtMocHelpers::SlotData<bool(QString, QString)>(65, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 7 },
-        }}),
-        // Slot 'deleteRawMarkedImage'
-        QtMocHelpers::SlotData<bool(QString)>(65, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 7 },
-        }}),
-        // Slot 'deleteRawLowImage'
         QtMocHelpers::SlotData<bool(QString, QString)>(66, 2, QMC::AccessPublic, QMetaType::Bool, {{
             { QMetaType::QString, 3 }, { QMetaType::QString, 7 },
         }}),
-        // Slot 'deleteRawLowImage'
+        // Slot 'deleteRawGlobalImage'
         QtMocHelpers::SlotData<bool(QString)>(66, 2, QMC::AccessPublic, QMetaType::Bool, {{
             { QMetaType::QString, 7 },
         }}),
-        // Slot 'deleteRawHighImage'
+        // Slot 'deleteRawMarkedImage'
         QtMocHelpers::SlotData<bool(QString, QString)>(67, 2, QMC::AccessPublic, QMetaType::Bool, {{
             { QMetaType::QString, 3 }, { QMetaType::QString, 7 },
         }}),
-        // Slot 'deleteRawHighImage'
+        // Slot 'deleteRawMarkedImage'
         QtMocHelpers::SlotData<bool(QString)>(67, 2, QMC::AccessPublic, QMetaType::Bool, {{
             { QMetaType::QString, 7 },
         }}),
-        // Slot 'deleteAllRawMarkImage'
+        // Slot 'deleteRawLowImage'
+        QtMocHelpers::SlotData<bool(QString, QString)>(68, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 7 },
+        }}),
+        // Slot 'deleteRawLowImage'
         QtMocHelpers::SlotData<bool(QString)>(68, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 7 },
+        }}),
+        // Slot 'deleteRawHighImage'
+        QtMocHelpers::SlotData<bool(QString, QString)>(69, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 7 },
+        }}),
+        // Slot 'deleteRawHighImage'
+        QtMocHelpers::SlotData<bool(QString)>(69, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 7 },
+        }}),
+        // Slot 'deleteAllRawMarkImage'
+        QtMocHelpers::SlotData<bool(QString)>(70, 2, QMC::AccessPublic, QMetaType::Bool, {{
             { QMetaType::QString, 3 },
         }}),
         // Slot 'deleteAllRawMarkImage'
-        QtMocHelpers::SlotData<bool()>(68, 2, QMC::AccessPublic, QMetaType::Bool),
+        QtMocHelpers::SlotData<bool()>(70, 2, QMC::AccessPublic, QMetaType::Bool),
         // Slot 'updateRawImageInfo'
-        QtMocHelpers::SlotData<bool(QString, QString, ImageInfo)>(69, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 56 }, { 0x80000000 | 57, 16 },
+        QtMocHelpers::SlotData<bool(QString, QString, ImageInfo)>(71, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 58 }, { 0x80000000 | 59, 16 },
         }}),
         // Slot 'updateRawImageInfo'
-        QtMocHelpers::SlotData<bool(QString, ImageInfo)>(69, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 56 }, { 0x80000000 | 57, 16 },
+        QtMocHelpers::SlotData<bool(QString, ImageInfo)>(71, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 58 }, { 0x80000000 | 59, 16 },
         }}),
         // Slot 'getRawImageInfo'
-        QtMocHelpers::SlotData<bool(QString, QString, ImageInfo *) const>(70, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 3 }, { QMetaType::QString, 56 }, { 0x80000000 | 59, 16 },
+        QtMocHelpers::SlotData<bool(QString, QString, ImageInfo *) const>(72, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 3 }, { QMetaType::QString, 58 }, { 0x80000000 | 61, 16 },
         }}),
         // Slot 'getRawImageInfo'
-        QtMocHelpers::SlotData<bool(QString, ImageInfo *) const>(70, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 56 }, { 0x80000000 | 59, 16 },
+        QtMocHelpers::SlotData<bool(QString, ImageInfo *) const>(72, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 58 }, { 0x80000000 | 61, 16 },
         }}),
         // Slot 'uploadFinished'
-        QtMocHelpers::SlotData<void(Artifact::ImageInfo)>(71, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { 0x80000000 | 72, 73 },
+        QtMocHelpers::SlotData<void(Artifact::ImageInfo)>(73, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 74, 75 },
         }}),
         // Slot 'upDataFinished'
-        QtMocHelpers::SlotData<void(QString)>(74, 2, QMC::AccessPrivate, QMetaType::Void, {{
+        QtMocHelpers::SlotData<void(QString)>(76, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { QMetaType::QString, 3 },
         }}),
         // Slot 'waitEnd'
-        QtMocHelpers::SlotData<void(QString, BaseInfo)>(75, 2, QMC::AccessPrivate, QMetaType::Void, {{
+        QtMocHelpers::SlotData<void(QString, BaseInfo)>(77, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { QMetaType::QString, 3 }, { 0x80000000 | 13, 14 },
         }}),
     };
@@ -526,143 +536,147 @@ void VerifyThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
         case 23: { bool _r = _t->verifyFinished();
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 24: { bool _r = _t->setVerifyNo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[2])));
+        case 24: { bool _r = _t->setLocalVerifyMode((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<bool>>(_a[2])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 25: { bool _r = _t->setVerifyNo((*reinterpret_cast<std::add_pointer_t<int>>(_a[1])));
+        case 25: { bool _r = _t->setLocalVerifyMode((*reinterpret_cast<std::add_pointer_t<bool>>(_a[1])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 26: { int _r = _t->getVerifyNo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 26: { bool _r = _t->setVerifyNo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[2])));
+            if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
+        case 27: { bool _r = _t->setVerifyNo((*reinterpret_cast<std::add_pointer_t<int>>(_a[1])));
+            if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
+        case 28: { int _r = _t->getVerifyNo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<int*>(_a[0]) = std::move(_r); }  break;
-        case 27: { int _r = _t->getVerifyNo();
+        case 29: { int _r = _t->getVerifyNo();
             if (_a[0]) *reinterpret_cast<int*>(_a[0]) = std::move(_r); }  break;
-        case 28: { QString _r = _t->getVerifyNumber();
+        case 30: { QString _r = _t->getVerifyNumber();
             if (_a[0]) *reinterpret_cast<QString*>(_a[0]) = std::move(_r); }  break;
-        case 29: { bool _r = _t->setVerifyNumber((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 31: { bool _r = _t->setVerifyNumber((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 30: { QStringList _r = _t->getVerifyDataList();
+        case 32: { QStringList _r = _t->getVerifyDataList();
             if (_a[0]) *reinterpret_cast<QStringList*>(_a[0]) = std::move(_r); }  break;
-        case 31: { const VerifyData* _r = _t->getVerifyData((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<bool*>>(_a[2])));
+        case 33: { const VerifyData* _r = _t->getVerifyData((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<bool*>>(_a[2])));
             if (_a[0]) *reinterpret_cast<const VerifyData**>(_a[0]) = std::move(_r); }  break;
-        case 32: { const VerifyData* _r = _t->getVerifyData((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 34: { const VerifyData* _r = _t->getVerifyData((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<const VerifyData**>(_a[0]) = std::move(_r); }  break;
-        case 33: { const VerifyData* _r = _t->getVerifyData((*reinterpret_cast<std::add_pointer_t<bool*>>(_a[1])));
+        case 35: { const VerifyData* _r = _t->getVerifyData((*reinterpret_cast<std::add_pointer_t<bool*>>(_a[1])));
             if (_a[0]) *reinterpret_cast<const VerifyData**>(_a[0]) = std::move(_r); }  break;
-        case 34: { const VerifyData* _r = _t->getVerifyData();
+        case 36: { const VerifyData* _r = _t->getVerifyData();
             if (_a[0]) *reinterpret_cast<const VerifyData**>(_a[0]) = std::move(_r); }  break;
-        case 35: { bool _r = _t->addMainImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
+        case 37: { bool _r = _t->addMainImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 36: { bool _r = _t->addMainImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 38: { bool _r = _t->addMainImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 37: { QImage _r = _t->getMainImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 39: { QImage _r = _t->getMainImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<QImage*>(_a[0]) = std::move(_r); }  break;
-        case 38: { QImage _r = _t->getMainImage();
+        case 40: { QImage _r = _t->getMainImage();
             if (_a[0]) *reinterpret_cast<QImage*>(_a[0]) = std::move(_r); }  break;
-        case 39: { QString _r = _t->globalImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[2])));
+        case 41: { QString _r = _t->globalImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[2])));
             if (_a[0]) *reinterpret_cast<QString*>(_a[0]) = std::move(_r); }  break;
-        case 40: { QString _r = _t->globalImageName((*reinterpret_cast<std::add_pointer_t<int>>(_a[1])));
+        case 42: { QString _r = _t->globalImageName((*reinterpret_cast<std::add_pointer_t<int>>(_a[1])));
             if (_a[0]) *reinterpret_cast<QString*>(_a[0]) = std::move(_r); }  break;
-        case 41: { QString _r = _t->lowImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<bool>>(_a[3])));
+        case 43: { QString _r = _t->lowImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<bool>>(_a[3])));
             if (_a[0]) *reinterpret_cast<QString*>(_a[0]) = std::move(_r); }  break;
-        case 42: { QString _r = _t->lowImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
+        case 44: { QString _r = _t->lowImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast<QString*>(_a[0]) = std::move(_r); }  break;
-        case 43: { QString _r = _t->lowImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<bool>>(_a[2])));
+        case 45: { QString _r = _t->lowImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<bool>>(_a[2])));
             if (_a[0]) *reinterpret_cast<QString*>(_a[0]) = std::move(_r); }  break;
-        case 44: { QString _r = _t->lowImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 46: { QString _r = _t->lowImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<QString*>(_a[0]) = std::move(_r); }  break;
-        case 45: { QString _r = _t->highImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<bool>>(_a[3])));
+        case 47: { QString _r = _t->highImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<bool>>(_a[3])));
             if (_a[0]) *reinterpret_cast<QString*>(_a[0]) = std::move(_r); }  break;
-        case 46: { QString _r = _t->highImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
+        case 48: { QString _r = _t->highImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast<QString*>(_a[0]) = std::move(_r); }  break;
-        case 47: { QString _r = _t->highImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<bool>>(_a[2])));
+        case 49: { QString _r = _t->highImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<bool>>(_a[2])));
             if (_a[0]) *reinterpret_cast<QString*>(_a[0]) = std::move(_r); }  break;
-        case 48: { QString _r = _t->highImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 50: { QString _r = _t->highImageName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<QString*>(_a[0]) = std::move(_r); }  break;
-        case 49: { bool _r = _t->deleteVerifyData((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 51: { bool _r = _t->deleteVerifyData((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 50: { bool _r = _t->deleteVerifyData();
+        case 52: { bool _r = _t->deleteVerifyData();
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 51: { bool _r = _t->addGlobalImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[4])));
+        case 53: { bool _r = _t->addGlobalImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[4])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 52: { bool _r = _t->addGlobalImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[3])));
+        case 54: { bool _r = _t->addGlobalImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[3])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 53: { bool _r = _t->addLowImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[4])));
+        case 55: { bool _r = _t->addLowImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[4])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 54: { bool _r = _t->addLowImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[3])));
+        case 56: { bool _r = _t->addLowImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[3])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 55: { bool _r = _t->addHighImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[4])));
+        case 57: { bool _r = _t->addHighImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[4])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 56: { bool _r = _t->addHighImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[3])));
+        case 58: { bool _r = _t->addHighImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[3])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 57: { bool _r = _t->deleteGlobalImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
+        case 59: { bool _r = _t->deleteGlobalImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 58: { bool _r = _t->deleteGlobalImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 60: { bool _r = _t->deleteGlobalImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 59: { bool _r = _t->deleteLowImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
+        case 61: { bool _r = _t->deleteLowImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 60: { bool _r = _t->deleteLowImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 62: { bool _r = _t->deleteLowImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 61: { bool _r = _t->deleteHighImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
+        case 63: { bool _r = _t->deleteHighImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 62: { bool _r = _t->deleteHighImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 64: { bool _r = _t->deleteHighImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 63: { bool _r = _t->deleteAllMarkImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 65: { bool _r = _t->deleteAllMarkImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 64: { bool _r = _t->deleteAllMarkImage();
+        case 66: { bool _r = _t->deleteAllMarkImage();
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 65: { bool _r = _t->updateImageInfo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[3])));
+        case 67: { bool _r = _t->updateImageInfo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[3])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 66: { bool _r = _t->updateImageInfo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[2])));
+        case 68: { bool _r = _t->updateImageInfo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[2])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 67: { bool _r = _t->getImageInfo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ImageInfo*>>(_a[3])));
+        case 69: { bool _r = _t->getImageInfo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ImageInfo*>>(_a[3])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 68: { bool _r = _t->getImageInfo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<ImageInfo*>>(_a[2])));
+        case 70: { bool _r = _t->getImageInfo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<ImageInfo*>>(_a[2])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 69: { bool _r = _t->addRawGlobalImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[4])));
+        case 71: { bool _r = _t->addRawGlobalImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[4])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 70: { bool _r = _t->addRawGlobalImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[3])));
+        case 72: { bool _r = _t->addRawGlobalImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[3])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 71: { bool _r = _t->addRawMarkedImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[4])));
+        case 73: { bool _r = _t->addRawMarkedImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[4])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 72: { bool _r = _t->addRawMarkedImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[3])));
+        case 74: { bool _r = _t->addRawMarkedImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[3])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 73: { bool _r = _t->addRawLowImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[4])));
+        case 75: { bool _r = _t->addRawLowImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[4])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 74: { bool _r = _t->addRawLowImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[3])));
+        case 76: { bool _r = _t->addRawLowImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[3])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 75: { bool _r = _t->addRawHighImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[4])));
+        case 77: { bool _r = _t->addRawHighImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[4])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 76: { bool _r = _t->addRawHighImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[3])));
+        case 78: { bool _r = _t->addRawHighImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[3])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 77: { bool _r = _t->deleteRawGlobalImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
+        case 79: { bool _r = _t->deleteRawGlobalImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 78: { bool _r = _t->deleteRawGlobalImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 80: { bool _r = _t->deleteRawGlobalImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 79: { bool _r = _t->deleteRawMarkedImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
+        case 81: { bool _r = _t->deleteRawMarkedImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 80: { bool _r = _t->deleteRawMarkedImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 82: { bool _r = _t->deleteRawMarkedImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 81: { bool _r = _t->deleteRawLowImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
+        case 83: { bool _r = _t->deleteRawLowImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 82: { bool _r = _t->deleteRawLowImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 84: { bool _r = _t->deleteRawLowImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 83: { bool _r = _t->deleteRawHighImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
+        case 85: { bool _r = _t->deleteRawHighImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 84: { bool _r = _t->deleteRawHighImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 86: { bool _r = _t->deleteRawHighImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 85: { bool _r = _t->deleteAllRawMarkImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+        case 87: { bool _r = _t->deleteAllRawMarkImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 86: { bool _r = _t->deleteAllRawMarkImage();
+        case 88: { bool _r = _t->deleteAllRawMarkImage();
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 87: { bool _r = _t->updateRawImageInfo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[3])));
+        case 89: { bool _r = _t->updateRawImageInfo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[3])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 88: { bool _r = _t->updateRawImageInfo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[2])));
+        case 90: { bool _r = _t->updateRawImageInfo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<ImageInfo>>(_a[2])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 89: { bool _r = _t->getRawImageInfo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ImageInfo*>>(_a[3])));
+        case 91: { bool _r = _t->getRawImageInfo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ImageInfo*>>(_a[3])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 90: { bool _r = _t->getRawImageInfo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<ImageInfo*>>(_a[2])));
+        case 92: { bool _r = _t->getRawImageInfo((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<ImageInfo*>>(_a[2])));
             if (_a[0]) *reinterpret_cast<bool*>(_a[0]) = std::move(_r); }  break;
-        case 91: _t->uploadFinished((*reinterpret_cast<std::add_pointer_t<Artifact::ImageInfo>>(_a[1]))); break;
-        case 92: _t->upDataFinished((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 93: _t->waitEnd((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<BaseInfo>>(_a[2]))); break;
+        case 93: _t->uploadFinished((*reinterpret_cast<std::add_pointer_t<Artifact::ImageInfo>>(_a[1]))); break;
+        case 94: _t->upDataFinished((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 95: _t->waitEnd((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<BaseInfo>>(_a[2]))); break;
         default: ;
         }
     }
@@ -707,14 +721,14 @@ int VerifyThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 94)
+        if (_id < 96)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 94;
+        _id -= 96;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 94)
+        if (_id < 96)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 94;
+        _id -= 96;
     }
     return _id;
 }

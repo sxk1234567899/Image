@@ -45,10 +45,11 @@ template <> constexpr inline auto WgtVerifyNo4::qt_create_metaobjectdata<qt_meta
         "on_radioButtonHgt_clicked",
         "on_pushButtonPhoto_clicked",
         "on_pushButtonGoPhoto_clicked",
+        "on_pushButtonVerifyMode_toggled",
+        "checked",
         "on_toolButtonFocus_clicked",
         "on_toolButtonRefImage_clicked",
         "on_toolButtonManualFocus_clicked",
-        "checked",
         "on_toolButtonFocusAdd_clicked",
         "on_toolButtonFocusSub_clicked",
         "picture",
@@ -69,33 +70,37 @@ template <> constexpr inline auto WgtVerifyNo4::qt_create_metaobjectdata<qt_meta
         QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'on_pushButtonGoPhoto_clicked'
         QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_pushButtonVerifyMode_toggled'
+        QtMocHelpers::SlotData<void(bool)>(6, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Bool, 7 },
+        }}),
         // Slot 'on_toolButtonFocus_clicked'
-        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'on_toolButtonRefImage_clicked'
-        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'on_toolButtonManualFocus_clicked'
-        QtMocHelpers::SlotData<void(bool)>(8, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Bool, 9 },
+        QtMocHelpers::SlotData<void(bool)>(10, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Bool, 7 },
         }}),
         // Slot 'on_toolButtonFocusAdd_clicked'
-        QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_toolButtonFocusSub_clicked'
         QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_toolButtonFocusSub_clicked'
+        QtMocHelpers::SlotData<void()>(12, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'picture'
-        QtMocHelpers::SlotData<void(QImage)>(12, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { 0x80000000 | 13, 14 },
+        QtMocHelpers::SlotData<void(QImage)>(13, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 14, 15 },
         }}),
         // Slot 'imageSelected'
-        QtMocHelpers::SlotData<void(QString, QImage)>(15, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::QString, 16 }, { 0x80000000 | 13, 14 },
+        QtMocHelpers::SlotData<void(QString, QImage)>(16, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 17 }, { 0x80000000 | 14, 15 },
         }}),
         // Slot 'imageView'
-        QtMocHelpers::SlotData<void(QString, QImage)>(17, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::QString, 16 }, { 0x80000000 | 13, 14 },
+        QtMocHelpers::SlotData<void(QString, QImage)>(18, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 17 }, { 0x80000000 | 14, 15 },
         }}),
         // Slot 'highImageClicked'
-        QtMocHelpers::SlotData<void(QString, QImage)>(18, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::QString, 16 }, { 0x80000000 | 13, 14 },
+        QtMocHelpers::SlotData<void(QString, QImage)>(19, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 17 }, { 0x80000000 | 14, 15 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -124,15 +129,16 @@ void WgtVerifyNo4::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         case 1: _t->on_radioButtonHgt_clicked(); break;
         case 2: _t->on_pushButtonPhoto_clicked(); break;
         case 3: _t->on_pushButtonGoPhoto_clicked(); break;
-        case 4: _t->on_toolButtonFocus_clicked(); break;
-        case 5: _t->on_toolButtonRefImage_clicked(); break;
-        case 6: _t->on_toolButtonManualFocus_clicked((*reinterpret_cast<std::add_pointer_t<bool>>(_a[1]))); break;
-        case 7: _t->on_toolButtonFocusAdd_clicked(); break;
-        case 8: _t->on_toolButtonFocusSub_clicked(); break;
-        case 9: _t->picture((*reinterpret_cast<std::add_pointer_t<QImage>>(_a[1]))); break;
-        case 10: _t->imageSelected((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2]))); break;
-        case 11: _t->imageView((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2]))); break;
-        case 12: _t->highImageClicked((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2]))); break;
+        case 4: _t->on_pushButtonVerifyMode_toggled((*reinterpret_cast<std::add_pointer_t<bool>>(_a[1]))); break;
+        case 5: _t->on_toolButtonFocus_clicked(); break;
+        case 6: _t->on_toolButtonRefImage_clicked(); break;
+        case 7: _t->on_toolButtonManualFocus_clicked((*reinterpret_cast<std::add_pointer_t<bool>>(_a[1]))); break;
+        case 8: _t->on_toolButtonFocusAdd_clicked(); break;
+        case 9: _t->on_toolButtonFocusSub_clicked(); break;
+        case 10: _t->picture((*reinterpret_cast<std::add_pointer_t<QImage>>(_a[1]))); break;
+        case 11: _t->imageSelected((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2]))); break;
+        case 12: _t->imageView((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2]))); break;
+        case 13: _t->highImageClicked((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2]))); break;
         default: ;
         }
     }
@@ -157,14 +163,14 @@ int WgtVerifyNo4::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 13)
+        if (_id < 14)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 13;
+        _id -= 14;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 13)
+        if (_id < 14)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 13;
+        _id -= 14;
     }
     return _id;
 }

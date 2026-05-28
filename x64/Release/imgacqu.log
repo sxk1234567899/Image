@@ -2,10 +2,566 @@
   复制了 1 个文件
    Qt/MSBuild: 3.5.0.0
    Qt: 6.11.0
+  main.cpp
+  bluetoothpairer.cpp
+  labelprint.cpp
+  usbcamera.cpp
+  regdb.cpp
+  verifydb.cpp
+  localverifyclient.cpp
+  verifythread.cpp
+  netcamera.cpp
+  appconfig.cpp
+  netimageload.cpp
+  networkserver.cpp
+  nativemark.cpp
+  regthread.cpp
+  sqlitedriver.cpp
+  systemset.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“main.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“main.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“camera/netcamera.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“camera/usbcamera.cpp”)
+  
+  wifimanager.cpp
+  minios3client.cpp
+  batchview.cpp
+  dlginfo.cpp
+  dlginput.cpp
+  imagewidget.cpp
+  refreshviewlabel.cpp
+  ringwait.cpp
+  dlgimageview.cpp
+  wgtprogress1.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgtapi/dlginfo.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgtapi/dlginfo.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgtapi/dlgimageview.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgtapi/batchview.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgtapi/dlgimageview.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgtapi/batchview.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgtapi/dlginput.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgtapi/dlginput.cpp”)
+  
+  wgtprogress2.cpp
+  wgtregno1.cpp
+  wgtregno2.cpp
+  wgtregno21.cpp
+  wgtregno3.cpp
+  wgtregno4.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/progress/wgtprogress1.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/progress/wgtprogress1.cpp”)
+  
+  wgtregno41.cpp
+  wgtregno5.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/progress/wgtprogress2.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/progress/wgtprogress2.cpp”)
+  
+  wgtregno51.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno1.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno1.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno2.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno2.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno21.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno21.cpp”)
+  
+  wgtregno6.cpp
+  wgtverifyno1.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno3.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno3.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno4.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno4.cpp”)
+  
+  wgtverifyno2.cpp
+  wgtverifyno21.cpp
+  wgtverifyno3.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno41.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno41.cpp”)
+  
+  wgtverifyno31.cpp
+  wgtverifyno4.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno5.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno5.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno51.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno51.cpp”)
+  
+  wgtverifyno41.cpp
+  wgtverifyno5.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno6.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/reg/wgtregno6.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno1.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno1.cpp”)
+  
+  wgtverifyno6.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno21.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno21.cpp”)
+  
+  wgtverifyno61.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno3.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno3.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno31.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno31.cpp”)
+  
+  wgthome.cpp
+  wgtprogress.cpp
+  wgtreg.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno4.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno4.cpp”)
+  
+  wgtset.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno5.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno5.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno2.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno2.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno41.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno41.cpp”)
+  
+  wgtsetnetcamera.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno61.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno61.cpp”)
+  
+  wgtverify.cpp
+  netcamera_p.cpp
+  dbpage.cpp
+  wgtbegan.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgthome.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgthome.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgtprogress.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgtprogress.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgtreg.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgtreg.cpp”)
+  
+  wgtlogo.cpp
+  wgtmain.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno6.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgtsetnetcamera.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgtsetnetcamera.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgtverify.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgtverify.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgtbegan.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgtbegan.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgtset.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgtset.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgtlogo.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgtlogo.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/verify/wgtverifyno6.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgtmain.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“camera/netcamera_p.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“sqlite/dbpage/dbpage.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“sqlite/dbpage/dbpage.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“wgt/wgtmain.cpp”)
+  
+  qrc_main.cpp
+  moc_wgtmain.cpp
+  moc_dbpage.cpp
+  moc_zxingqtreader.cpp
+  moc_usbcamera.cpp
+  moc_regthread.cpp
+  moc_wgtregno2.cpp
+  moc_imagewidget.cpp
+  moc_wgtregno21.cpp
+  moc_netcamera.cpp
+  moc_appconfig.cpp
+  moc_dlgimageview.cpp
+  moc_nativemark.cpp
+  moc_networkserver.cpp
+  moc_regdb.cpp
+  moc_verifydb.cpp
+  moc_localverifyclient.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno2.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno2.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno21.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno21.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_dlgimageview.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_dlgimageview.cpp”)
+  
+  moc_verifythread.cpp
+  moc_netimageload.cpp
+  moc_labelprint.cpp
+  moc_bluetoothpairer.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_usbcamera.cpp”)
+  
+  moc_wgtregno51.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_dbpage.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_netcamera.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtmain.cpp”)
+  
+  moc_refreshviewlabel.cpp
+  moc_networkspeedtester.cpp
+  moc_wgtprogress1.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_dbpage.cpp”)
+  
+  moc_wgtprogress2.cpp
+  moc_minios3client.cpp
+  moc_ringwait.cpp
+  moc_batchview.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtmain.cpp”)
+  
+  moc_dlginfo.cpp
+  moc_wgtverifyno31.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno51.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno51.cpp”)
+  
+  moc_wgtverifyno41.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtprogress1.cpp”)
+  
+  moc_wgtregno41.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtprogress1.cpp”)
+  
+  moc_wgtverifyno21.cpp
+  moc_dlginput.cpp
+  moc_wgtverifyno61.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtprogress2.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtprogress2.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_batchview.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_batchview.cpp”)
+  
+  moc_wgtsetnetcamera.cpp
+  moc_wgtverifyno6.cpp
+  moc_wgtverifyno5.cpp
+  moc_wgtverifyno4.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_dlginfo.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_dlginfo.cpp”)
+  
+  moc_wgtverifyno3.cpp
+  moc_wgtverifyno2.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno31.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno31.cpp”)
+  
+  moc_wgtverifyno1.cpp
+  moc_wgtregno6.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno41.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno41.cpp”)
+  
+  moc_wgtregno5.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno41.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno41.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno21.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno21.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno61.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno61.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_dlginput.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_dlginput.cpp”)
+  
+  moc_wgtregno4.cpp
+  moc_wgtregno3.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtsetnetcamera.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtsetnetcamera.cpp”)
+  
+  moc_wgtregno1.cpp
+  moc_wgtverify.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno5.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno5.cpp”)
+  
+  moc_wgtreg.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno4.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno4.cpp”)
+  
+  moc_wgtprogress.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno3.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno3.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno2.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno2.cpp”)
+  
+  moc_wgtset.cpp
+  moc_wgthome.cpp
+  moc_wgtlogo.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno1.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno1.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno6.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno6.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno5.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno5.cpp”)
+  
+  moc_wgtbegan.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno6.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno4.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno4.cpp”)
+  
+  moc_netcamera_p.cpp
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno3.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno3.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno1.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverify.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtregno1.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverify.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtreg.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtreg.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtprogress.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtprogress.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtset.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtset.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgthome.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgthome.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtlogo.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtlogo.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtverifyno6.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtbegan.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtWidgets\qapplication.h(146,10): warning C4996: 'QGuiApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_wgtbegan.cpp”)
+  
+D:\Qt\6.11.0\msvc2022_64\include\QtGui\qguiapplication.h(168,10): warning C4996: 'QCoreApplication::compressEvent': This feature will be removed in Qt 7
+  (编译源文件“x64/Release/qt/moc/moc_netcamera_p.cpp”)
+  
   正在生成代码
-  1 of 9924 functions (<0.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  Previous IPDB was built with incompatible compiler, fall back to full compilation.
+  All 9201 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   已完成代码的生成
   imgacqu.vcxproj -> E:\project\imgacqu\x64\imgacqu\bin\imgacqu.exe
   Qt Deploy: "D:/Qt/6.11.0/msvc2022_64/bin\windeployqt.exe" --list target --qmldir E:\project\imgacqu\imgacqu\ --dir E:\project\imgacqu\x64\imgacqu\bin\ E:\project\imgacqu\x64\imgacqu\bin\imgacqu.exe

@@ -828,6 +828,7 @@ void RegThread::doWork()
         //jsonData.insert("weight", QString());
         jsonData.insert("artifact_category", 3);
         jsonData.insert("sampling_id", data->baseInfo.id);
+		jsonData.insert("main_image", data->baseInfo.mainImageAddr);
 		jsonData.insert("weight","0kg");
 		QJsonArray aroundInfos;
         for (auto j = data->globalImage.begin(); j != data->globalImage.end(); ++j)

@@ -93,7 +93,83 @@ QImage NetImageLoad::loadImageInfoBlocking(Artifact::ImageInfo* info)
 }
 QList<QImage> NetImageLoad::loadImageListBlocking(QList<Artifact::ImageInfo*> infoList)
 {
-    return QtConcurrent::blockingMapped(infoList, &NetImageLoad::loadImageInfoBlocking);
+	// 使用单个 QNetworkAccessManager 发出所有请求，利用 HTTP/2 多路复用和连接复用
+	QList<QImage> results(infoList.size());
+	QList<QNetworkReply*> replies(infoList.size(), nullptr);
+	int pending = 0;
+
+	QNetworkAccessManager manager;
+	manager.setTransferTimeout(2 * 60 * 1000);
+
+	for (int i = 0; i < infoList.size(); i++)
+	{
+		auto info = infoList[i];
+		if (info->status == Artifact::saved)
+		{
+			QImage cached;
+			if (cached.load(info->imageLocalAddr))
+			{
+				results[i] = cached;
+				continue;
+			}
+		}
+		QNetworkRequest request(info->imageNetAddr);
+		request.setAttribute(QNetworkRequest::Http2AllowedAttribute, true);
+		replies[i] = manager.get(request);
+		pending++;
+	}
+
+	if (pending == 0)
+		return results;
+
+	// 等待所有请求完成
+	QEventLoop loop;
+	QTimer::singleShot(2 * 60 * 1000, &loop, &QEventLoop::quit);
+	for (int i = 0; i < replies.size(); i++)
+	{
+		if (replies[i] == nullptr)
+			continue;
+		QObject::connect(replies[i], &QNetworkReply::finished, &loop, [&]() {
+			pending--;
+			if (pending <= 0)
+				loop.quit();
+		});
+	}
+	loop.exec();
+
+	// 收集结果
+	for (int i = 0; i < replies.size(); i++)
+	{
+		auto reply = replies[i];
+		if (reply == nullptr)
+			continue;
+
+		auto info = infoList[i];
+		if (reply->error() == QNetworkReply::NoError)
+		{
+			QImageReader reader(reply);
+			if (reader.canRead())
+			{
+				results[i] = reader.read();
+				if (!results[i].isNull())
+				{
+					info->status = Artifact::saved;
+					results[i].save(info->imageLocalAddr);
+				}
+			}
+			else
+			{
+				info->status = Artifact::saveFailed;
+			}
+		}
+		else
+		{
+			info->status = Artifact::saveFailed;
+		}
+		reply->deleteLater();
+	}
+
+	return results;
 }
 
 void NetImageLoad::onNetworkReplyFinished(QNetworkReply* reply)

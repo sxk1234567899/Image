@@ -66,6 +66,7 @@ public:
     QRadioButton *radioButtonHgt;
     QSpacerItem *horizontalSpacer_4;
     QPushButton *pushButtonPhoto;
+    QPushButton *pushButtonVerifyMode;
     QSpacerItem *horizontalSpacer_8;
     QPushButton *pushButtonGoVerify5;
     QSpacerItem *horizontalSpacer_2;
@@ -280,13 +281,25 @@ public:
 
         horizontalLayout_5->addWidget(pushButtonPhoto);
 
+        pushButtonVerifyMode = new QPushButton(pagePhoto);
+        pushButtonVerifyMode->setObjectName("pushButtonVerifyMode");
+        pushButtonVerifyMode->setMinimumSize(QSize(200, 70));
+        pushButtonVerifyMode->setMaximumSize(QSize(200, 70));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/image/switch.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        pushButtonVerifyMode->setIcon(icon1);
+        pushButtonVerifyMode->setIconSize(QSize(36, 36));
+        pushButtonVerifyMode->setCheckable(true);
+
+        horizontalLayout_5->addWidget(pushButtonVerifyMode);
+
         horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         horizontalLayout_5->addItem(horizontalSpacer_8);
 
         pushButtonGoVerify5 = new QPushButton(pagePhoto);
         pushButtonGoVerify5->setObjectName("pushButtonGoVerify5");
-        pushButtonGoVerify5->setMinimumSize(QSize(240, 70));
+        pushButtonGoVerify5->setMinimumSize(QSize(200, 70));
 
         horizontalLayout_5->addWidget(pushButtonGoVerify5);
 
@@ -357,6 +370,7 @@ public:
         radioButtonLow->setText(QCoreApplication::translate("WgtVerifyNo4Class", "\344\275\216\345\200\215", nullptr));
         radioButtonHgt->setText(QCoreApplication::translate("WgtVerifyNo4Class", "\351\253\230\345\200\215", nullptr));
         pushButtonPhoto->setText(QCoreApplication::translate("WgtVerifyNo4Class", "    \346\213\215 \346\221\204", nullptr));
+        pushButtonVerifyMode->setText(QCoreApplication::translate("WgtVerifyNo4Class", "\346\234\215\345\212\241\345\231\250\351\252\214\350\257\201", nullptr));
         pushButtonGoVerify5->setText(QCoreApplication::translate("WgtVerifyNo4Class", "\344\270\213\344\270\200\346\255\245", nullptr));
         pushButtonSkipSampling->setText(QCoreApplication::translate("WgtVerifyNo4Class", "\350\267\263 \350\277\207", nullptr));
         pushButtonGoPhoto->setText(QCoreApplication::translate("WgtVerifyNo4Class", "\345\210\207\346\215\242\344\270\272\346\230\276\345\276\256\347\233\270\346\234\272\346\213\215\346\221\204", nullptr));
