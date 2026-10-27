@@ -91,13 +91,7 @@ bool NetCameraPrivate::zoom(int zoom)
 	}
 	value["ezoom_value"] = zoom;
 	mImageConf["set_image"] = value;
-	bool ret = setRequest(mImageConf);
-	if(ret)
-	{
-		QEventLoop loop;
-		QTimer::singleShot(2000, &loop, &QEventLoop::quit); // 超时设置
-		loop.exec();
-	}
+	bool ret = setRequest(mImageConf); // 阻塞直至 SDK 线程确认命令生效
 	qDebug() << "zoom:" << ret;
 	return ret;
 }
@@ -546,11 +540,8 @@ void NetCameraPrivate::mGetVideoFrameData()
 					isTakePictures = false;
 					qDebug() << "NetCameraPrivate:mGetVideoFrameData::picture";
 					emit q->picture(img.copy());
+					// 复位为配置的主码流(1920*1080)，避免写死 720p(此设备不支持)
 					QJsonObject json = mCmdJson["set_stream"].toObject();
-					QJsonObject value = json["set_stream"].toObject();
-					value["wh"] = "1280*720";
-					value["frame_rate"] = "25";
-					json["set_stream"] = value;
 					mSetRequest(json);
 				}
 				else if (isTakePictures && img.size() == QSize(3840, 2160))

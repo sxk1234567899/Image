@@ -295,15 +295,12 @@
   "set_stream": {
     "cmd": "set_stream",
     "set_stream": {
-      "bitrate": 21000,
+      "bitrate": 8000,
       "chnn": 0,
       "fmt": "mjpeg",
       "frame_rate": 20,
-      "i_interval": 90,
       "idx": 0,
-      "quality": "high",
-      "rc_mode": "cbr",
-      "wh": "1280*720"
+      "wh": "1920*1080"
     }
   },
   "get_stream": {

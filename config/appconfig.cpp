@@ -1,6 +1,6 @@
 ﻿#include "appconfig.h"
 
-#define appVersionNo	(QString("02.00.29"))
+#define appVersionNo	(QString("02.00.31"))
 #define dateVersionNo   (QLocale( QLocale::English ).toDate( QString(__DATE__).replace( "  ", " 0" ), "MMM dd yyyy").toString("yyyyMMdd")+QString( __TIME__).remove(":"))
 
 AppConfig* AppConfig::self = nullptr;
